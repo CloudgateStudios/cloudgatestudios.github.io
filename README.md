@@ -82,7 +82,7 @@ cloudgatestudios.github.io/
 > **Note:** `appStoreUrl`, `playStoreUrl`, and `platform` are optional — they control whether store badges appear on the project card. Set them to `null` (or omit them) for tools, services, or anything that isn't a mobile app.
 
 2. Place the icon image in `src/assets/img/`.
-3. *(Optional)* If the project needs its own landing page, create one at `src/apps/mynewproject/index.njk` with `permalink: /MyNewProject/` in the front matter. If the project links directly to an external URL (e.g. a web service), you can skip this step and point `url` in `projects.json` to the external address instead.
+3. *(Optional)* If the project needs its own landing page, create one at `src/projects/mynewproject/index.njk` with `permalink: /MyNewProject/` in the front matter. If the project links directly to an external URL (e.g. a web service), you can skip this step and point `url` in `projects.json` to the external address instead.
 
 ---
 

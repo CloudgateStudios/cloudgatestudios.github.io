@@ -3,7 +3,7 @@
   "language": "en",
   "files": [
     "src/blog/**/*.md",
-    "src/apps/**/*.njk",
+    "src/projects/**/*.njk",
     "src/index.njk",
     "README.md"
   ],
@@ -25,6 +25,9 @@
     "CloudgateStudios",
     "bikesharebuddy",
     "BikeShareBuddy",
+    "curlingscoreboard",
+    "CurlingScoreboard",
+    "Scorekeeping",
     "njk",
     "nunjucks",
     "eleventy",
