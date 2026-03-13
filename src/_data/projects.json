@@ -11,5 +11,18 @@
     "platform": ["ios"],
     "status": "active",
     "featured": true
+  },
+  {
+    "name": "Curling Scoreboard",
+    "slug": "curlingscoreboard",
+    "tagline": "Scorekeeping for the sport of curling",
+    "description": "A web app for tracking scores during a curling match, designed for simplicity on and off the ice.",
+    "icon": null,
+    "url": "/CurlingScoreboard/",
+    "appStoreUrl": null,
+    "playStoreUrl": null,
+    "platform": ["web"],
+    "status": "active",
+    "featured": true
   }
 ]

@@ -395,6 +395,14 @@ ul {
   box-shadow: var(--shadow-sm);
 }
 
+.app-card-icon-placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border, #e0e0e0);
+}
+
 .app-card-name {
   font-size: var(--text-lg);
   font-weight: 600;
