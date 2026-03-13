@@ -1,0 +1,48 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "files": [
+    "src/blog/**/*.md",
+    "src/apps/**/*.njk",
+    "src/index.njk",
+    "README.md"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "_site/**",
+    "BikeShareBuddy/**",
+    ".github/**"
+  ],
+  "ignoreRegExpList": [
+    "\\{[{%][\\s\\S]*?[%}]\\}",
+    "https?://[^\\s\"']+",
+    "^---[\\s\\S]*?^---"
+  ],
+  "words": [
+    "cloudgate",
+    "Cloudgate",
+    "cloudgatestudios",
+    "CloudgateStudios",
+    "bikesharebuddy",
+    "BikeShareBuddy",
+    "njk",
+    "nunjucks",
+    "eleventy",
+    "frontmatter",
+    "passthrough",
+    "tailwind",
+    "mailto",
+    "itunes",
+    "arra",
+    "Arra",
+    "permalink",
+    "CNAME",
+    "gh-pages",
+    "noopener",
+    "noreferrer",
+    "webfonts",
+    "gstatic",
+    "Inter"
+  ],
+  "flagWords": []
+}

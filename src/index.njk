@@ -1,0 +1,84 @@
+---
+layout: base.njk
+title: Home
+description: "A one-person studio building apps, tools, and services from the Chicago suburbs."
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">A one-person studio<br>building things that matter.</h1>
+    <p class="hero-subtitle">Apps, tools, and services from the Chicago suburbs.</p>
+    <a href="#projects" class="hero-cta">See the work</a>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-heading">Projects</h2>
+      <p class="section-subheading">Things built and maintained by Cloudgate Studios.</p>
+    </div>
+    <div class="apps-grid">
+      {% for app in projects %}
+        {% include "app-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-heading">About</h2>
+    </div>
+    <div class="about-content">
+      <p>Cloudgate Studios is a one-person studio run by Tom Arra, a software engineer based in the Chicago suburbs.</p>
+      <p>The goal is to build small, focused products that solve real problems — and maintain them properly over the long haul.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Blog preview -->
+<section class="section section-alt" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-heading">Blog</h2>
+      <p class="section-subheading">Notes on development, design, and the occasional project update.</p>
+    </div>
+    {% if collections.posts.length %}
+      <div class="blog-grid">
+        {% for post in collections.posts %}{% if loop.index <= 3 %}
+        <article class="blog-card">
+          <time class="blog-card-date" datetime="{{ post.date | dateISO }}">{{ post.date | dateFormat }}</time>
+          <h3 class="blog-card-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          {% if post.data.description %}
+          <p class="blog-card-desc">{{ post.data.description }}</p>
+          {% endif %}
+          <a href="{{ post.url }}" class="read-more">Read more →</a>
+        </article>
+        {% endif %}{% endfor %}
+      </div>
+      {% if collections.posts.length > 3 %}
+      <div class="view-all-link">
+        <a href="/blog/" class="btn-outline">View all posts</a>
+      </div>
+      {% endif %}
+    {% else %}
+      <p class="blog-empty">Posts coming soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section section-primary" id="contact">
+  <div class="container">
+    <div class="contact-content">
+      <h2 class="section-heading">Get in touch</h2>
+      <p>Have a question, a bug report, or just want to say hello? Drop me an email.</p>
+      <a href="mailto:{{ site.email }}" class="btn-primary">Send an email</a>
+    </div>
+  </div>
+</section>

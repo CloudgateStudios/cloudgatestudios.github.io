@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Bike Share Buddy",
+    "slug": "bikesharebuddy",
+    "tagline": "Quick access to many bike sharing programs",
+    "description": "Helps you find bike share stations in any city you're traveling in across the United States and Europe.",
+    "icon": "/assets/img/BikeBuddyAppIcon.png",
+    "url": "/BikeShareBuddy/",
+    "appStoreUrl": "https://itunes.apple.com/app/id998776734?mt=8",
+    "playStoreUrl": null,
+    "platform": ["ios"],
+    "status": "active",
+    "featured": true
+  }
+]
