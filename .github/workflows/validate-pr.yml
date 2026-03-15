@@ -85,4 +85,4 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
-          custom-url: https://cloudgatestudios.com
+          pages-base-url: https://cloudgatestudios.com
