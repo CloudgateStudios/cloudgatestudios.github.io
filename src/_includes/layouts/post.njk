@@ -5,7 +5,7 @@ layout: base.njk
   <header class="post-header">
     <div class="container">
       <div class="post-meta">
-        <a href="/blog/" class="back-link">← All Posts</a>
+        <a href="{{ "/blog/" | url }}" class="back-link">← All Posts</a>
         <time datetime="{{ page.date | dateISO }}">{{ page.date | dateFormat }}</time>
       </div>
       <h1 class="post-title">{{ title }}</h1>

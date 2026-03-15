@@ -53,17 +53,17 @@ description: "A one-person studio building apps, tools, and services from the Ch
         {% for post in collections.posts %}{% if loop.index <= 3 %}
         <article class="blog-card">
           <time class="blog-card-date" datetime="{{ post.date | dateISO }}">{{ post.date | dateFormat }}</time>
-          <h3 class="blog-card-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <h3 class="blog-card-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
           {% if post.data.description %}
           <p class="blog-card-desc">{{ post.data.description }}</p>
           {% endif %}
-          <a href="{{ post.url }}" class="read-more">Read more →</a>
+          <a href="{{ post.url | url }}" class="read-more">Read more →</a>
         </article>
         {% endif %}{% endfor %}
       </div>
       {% if collections.posts.length > 3 %}
       <div class="view-all-link">
-        <a href="/blog/" class="btn-outline">View all posts</a>
+        <a href="{{ "/blog/" | url }}" class="btn-outline">View all posts</a>
       </div>
       {% endif %}
     {% else %}
