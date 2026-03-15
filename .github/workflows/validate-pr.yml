@@ -71,11 +71,9 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        if: github.event.action != 'closed'
         run: npm ci
 
       - name: Build site
-        if: github.event.action != 'closed'
         run: npm run build
         env:
           PATH_PREFIX: /pr-preview/pr-${{ github.event.pull_request.number }}/
