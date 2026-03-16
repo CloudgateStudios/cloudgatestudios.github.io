@@ -6,8 +6,6 @@
     "description": "Helps you find bike share stations in any city you're traveling in across the United States and Europe.",
     "icon": "/assets/img/BikeBuddyAppIcon.png",
     "url": "/BikeShareBuddy/",
-    "appStoreUrl": "https://itunes.apple.com/app/id998776734?mt=8",
-    "playStoreUrl": null,
     "platform": ["ios"],
     "status": "active",
     "featured": true
@@ -17,10 +15,8 @@
     "slug": "curlingscoreboard",
     "tagline": "Scorekeeping for the sport of curling",
     "description": "A web app for tracking scores during a curling match, designed for simplicity on and off the ice.",
-    "icon": null,
+    "icon": "/assets/img/CurlingScoreboardIcon.png",
     "url": "/CurlingScoreboard/",
-    "appStoreUrl": null,
-    "playStoreUrl": null,
     "platform": ["web"],
     "status": "active",
     "featured": true
