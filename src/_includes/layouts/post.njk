@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+<article class="post-layout">
+  <header class="post-header">
+    <div class="container">
+      <div class="post-meta">
+        <a href="{{ "/blog/" | url }}" class="back-link">← All Posts</a>
+        <time datetime="{{ page.date | dateISO }}">{{ page.date | dateFormat }}</time>
+      </div>
+      <h1 class="post-title">{{ title }}</h1>
+      {% if description %}
+      <p class="post-description">{{ description }}</p>
+      {% endif %}
+    </div>
+  </header>
+  <div class="post-body">
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>

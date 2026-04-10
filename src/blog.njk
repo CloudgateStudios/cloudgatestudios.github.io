@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Blog
+description: "Notes on development, design, and project updates from Cloudgate Studios."
+permalink: /blog/
+---
+
+<div class="blog-listing-header">
+  <div class="container">
+    <h1>Blog</h1>
+  </div>
+</div>
+
+<div class="blog-listing-body">
+  <div class="container">
+    {% if collections.posts.length %}
+      <div class="blog-grid">
+        {% for post in collections.posts %}
+        <article class="blog-card">
+          <time class="blog-card-date" datetime="{{ post.date | dateISO }}">{{ post.date | dateFormat }}</time>
+          <h2 class="blog-card-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+          {% if post.data.description %}
+          <p class="blog-card-desc">{{ post.data.description }}</p>
+          {% endif %}
+          <a href="{{ post.url | url }}" class="read-more">Read more →</a>
+        </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="blog-empty">No posts yet — check back soon.</p>
+    {% endif %}
+  </div>
+</div>

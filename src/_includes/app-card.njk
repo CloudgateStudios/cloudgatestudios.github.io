@@ -1,0 +1,21 @@
+<article class="app-card">
+  <a href="{{ app.url | url }}" class="app-card-link">
+    <div class="app-card-icon">
+      {% if app.icon %}
+      <img
+        src="{{ app.icon | url }}"
+        alt="{{ app.name }} icon"
+        width="80"
+        height="80"
+        loading="lazy"
+      />
+      {% else %}
+      <div class="app-card-icon-placeholder" aria-hidden="true"></div>
+      {% endif %}
+    </div>
+    <div class="app-card-body">
+      <h3 class="app-card-name">{{ app.name }}</h3>
+      <p class="app-card-tagline">{{ app.tagline }}</p>
+    </div>
+  </a>
+</article>
