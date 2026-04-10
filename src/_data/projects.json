@@ -20,5 +20,16 @@
     "platform": ["web"],
     "status": "active",
     "featured": true
+  },
+  {
+    "name": "PerfPro Converter",
+    "slug": "perfproconverter",
+    "tagline": "Convert PerfPro workouts for TrainingPeaks, Strava, and Garmin",
+    "description": "Converts PerfPro / Computrainer .3dp workout files into TCX files you can upload to TrainingPeaks, Strava, Garmin Connect, and more — all in your browser, no uploads required.",
+    "icon": "/assets/img/PerfProConverterIcon.png",
+    "url": "/PerfProConverter/",
+    "platform": ["web"],
+    "status": "active",
+    "featured": true
   }
 ]
