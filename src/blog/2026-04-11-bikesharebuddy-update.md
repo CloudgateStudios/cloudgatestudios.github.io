@@ -1,10 +1,10 @@
 ---
-title: "Bike Share Buddy is getting a big update"
+title: "Bike Share Buddy gets a big update"
 date: 2026-04-11
 description: "The app has been completely rewritten with SwiftUI and Liquid Glass, modernizing the codebase and bringing it in line with the look of the current OS."
 ---
 
-A significant update to [Bike Share Buddy](https://apps.apple.com/app/id998776734) is currently in review with Apple. Once it clears, it'll be the biggest change to the app since it launched.
+A major update to [Bike Share Buddy](https://apps.apple.com/app/id998776734) is now available on the App Store. It's the biggest change to the app since it launched.
 
 ## What changed
 
@@ -14,6 +14,6 @@ The new version feels right at home on the current OS. Liquid Glass gives the in
 
 ## What's next
 
-The rewrite was the necessary groundwork. With a modernized codebase, adding new features — things that would've been painful to build before — becomes a lot more approachable. More updates to follow once this one is live.
+The rewrite was the necessary groundwork. With a modernized codebase, adding new features — things that would've been painful to build before — becomes a lot more approachable. More updates to follow.
 
-Keep an eye on the App Store for the update, or check back here for news.
+[Download Bike Share Buddy on the App Store](https://apps.apple.com/app/id998776734)
