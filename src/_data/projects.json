@@ -22,6 +22,17 @@
     "featured": true
   },
   {
+    "name": "Race Replay",
+    "slug": "racereplay",
+    "tagline": "Leg-by-leg physical passing data",
+    "description": "Calculates every physical pass that happened on course using per-athlete start times so the numbers reflect what actually happened on the road, not just chip time rank.",
+    "icon": "/assets/img/RaceReplayIcon.png",
+    "url": "/RaceReplay/",
+    "platform": ["web"],
+    "status": "active",
+    "featured": true
+  },
+  {
     "name": "PerfPro Converter",
     "slug": "perfproconverter",
     "tagline": "Convert PerfPro workouts for TrainingPeaks, Strava, and Garmin",
