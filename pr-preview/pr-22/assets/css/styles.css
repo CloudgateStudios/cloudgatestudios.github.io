@@ -924,6 +924,29 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+/* Two phone captures shown side by side. Staggered so the pair reads as a
+   composition rather than two rectangles. */
+.app-detail-screenshot--pair {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.app-detail-screenshot--pair img {
+  width: 48%;
+  max-width: 48%;
+  height: auto;
+  margin-inline: 0;
+  /* A light UI capture on a white page needs an edge; the shadow alone is
+     not enough to close it. */
+  border: 1px solid var(--color-border);
+}
+
+.app-detail-screenshot--pair img:last-child {
+  margin-top: var(--space-8);
+}
+
 /* Give a landscape screenshot the larger share of the row. Its detail is
    bound to its width, since the aspect ratio is fixed. Only once the row is
    wide enough to spare it, or the text column drops below a readable measure. */
