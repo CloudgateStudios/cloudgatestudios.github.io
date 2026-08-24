@@ -26,7 +26,7 @@
     "slug": "racereplay",
     "tagline": "Leg-by-leg physical passing data",
     "description": "Calculates every physical pass that happened on course using per-athlete start times so the numbers reflect what actually happened on the road, not just chip time rank.",
-    "icon": "/assets/img/RaceReplayIcon.png",
+    "icon": "/assets/img/RaceReplayIcon.svg",
     "url": "/RaceReplay/",
     "platform": ["web"],
     "status": "active",
