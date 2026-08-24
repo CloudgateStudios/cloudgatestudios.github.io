@@ -56,7 +56,7 @@
 <p>Which means there is no live game roughly 95% of the time someone might open the app. A Live Activity that is smart about when to show up during a game is more useful and just in time.</p>
 <p>So &quot;no game right now&quot; is not an empty state to design around at the end. It is the default state, and it got the most attention. Every screen answers what you care about when nothing is on: when is the next game, what happened last night, where does my team stand, and who is leading the season.</p>
 <h2>Standings are computed, not fetched</h2>
-<p>One detail worth mentioning because it surprised me. The upstream data has schedules, scores, box scores, line scores, per-player batting and pitching lines — a lot. What it does not have is standings.</p>
+<p>One detail worth mentioning because it surprised me. The upstream data has schedules, scores, box scores, line scores, per-player batting and pitching lines which is great. But what it does not have is standings.</p>
 <p>So Peach derives them from completed games: wins and losses, percentage, run differential, streak, and last five. The numbers are validated against the team record embedded in each box score, and they match exactly.</p>
 <p>That computation lives on the server rather than in the app, deliberately. If a data source that does supply standings shows up next season, that becomes a server change instead of an app update sitting behind App Store review.</p>
 <h2>Unofficial, and staying that way</h2>
