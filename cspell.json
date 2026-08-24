@@ -27,6 +27,7 @@
     "computrainer",
     "curlingscoreboard",
     "eleventy",
+    "figcaption",
     "frontmatter",
     "gh-pages",
     "gstatic",
@@ -40,6 +41,7 @@
     "passthrough",
     "permalink",
     "scorekeeping",
+    "racereplay",
     "strava",
     "tailwind",
     "webfonts"
