@@ -924,6 +924,15 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+/* Give a landscape screenshot the larger share of the row. Its detail is
+   bound to its width, since the aspect ratio is fixed. Only once the row is
+   wide enough to spare it, or the text column drops below a readable measure. */
+@media (min-width: 1024px) {
+  .app-detail-description-inner--wide-media {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
 /* Landscape screenshot: fills its grid column rather than taking the 280px
    cap that suits a portrait phone shot. */
 .app-detail-screenshot--wide img {
