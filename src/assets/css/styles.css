@@ -970,6 +970,24 @@ ul {
   font-size: var(--text-sm) !important;
 }
 
+/* Stands in for the store button until an app is approved. */
+.app-detail-pending {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  opacity: 0.85;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+}
+
+/* Unofficial-status notice, kept quieter than the body copy. */
+.app-detail-disclaimer {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm) !important;
+  color: var(--color-text-muted);
+}
+
 .app-detail-privacy-link a {
   color: var(--color-text-muted);
   text-decoration: underline;
