@@ -4,7 +4,7 @@ date: 2026-06-17
 description: "Race Replay shows you every physical pass that happened on course using per-athlete start times — so the numbers reflect what actually happened on the road, not just chip time rank."
 ---
 
-Today I'm launching [Race Replay](https://racereplay.app), a new tool for endurance racing that answers a question chip time results have never been able to answer: who actually passed whom on the road?
+Today we are launching [Race Replay](https://racereplay.app), a new tool for endurance racing that answers a question chip time results have never been able to answer: who actually passed whom on the road?
 
 ## The problem with chip time results
 
