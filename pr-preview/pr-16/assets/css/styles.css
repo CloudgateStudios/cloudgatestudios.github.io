@@ -924,33 +924,17 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
-/* Single-column description, for pages whose screenshot sits in its own
-   full-width row below rather than beside the text. */
-.app-detail-description-inner--single {
-  grid-template-columns: 1fr;
-}
-
-/* Keep the measure readable now that the text spans the whole container. */
-.app-detail-description-inner--single .app-detail-description-text p {
-  max-width: 68ch;
-}
-
-/* Wide screenshot showcase, for web apps whose UI needs the full column width. */
-.app-detail-showcase {
-  padding-bottom: var(--space-24);
-  background-color: var(--color-bg);
-}
-
-.app-detail-shot img {
+/* Landscape screenshot: fills its grid column rather than taking the 280px
+   cap that suits a portrait phone shot. */
+.app-detail-screenshot--wide img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
 }
 
-.app-detail-shot figcaption {
+.app-detail-screenshot figcaption {
   margin-top: var(--space-4);
   font-size: var(--text-sm);
   color: var(--color-text-muted);
@@ -1040,5 +1024,9 @@ ul {
 
   .app-detail-screenshot {
     order: -1;
+  }
+
+  .app-detail-screenshot--wide {
+    order: 0;
   }
 }
