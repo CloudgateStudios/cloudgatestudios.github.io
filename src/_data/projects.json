@@ -3,7 +3,7 @@
     "name": "Peach",
     "slug": "peach",
     "tagline": "Live women's pro baseball on your Lock Screen",
-    "description": "Puts a live women's professional baseball game on your Lock Screen and in the Dynamic Island, with schedules, standings, and season leaders for the nights in between.",
+    "description": "Puts a live women's professional baseball game on your Lock Screen and in the Dynamic Island on your iOS device.",
     "icon": "/assets/img/PeachIcon.png",
     "url": "/Peach/",
     "platform": ["ios"],
