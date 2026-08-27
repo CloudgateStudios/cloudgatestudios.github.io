@@ -924,6 +924,29 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+/* Two phone captures shown side by side. Staggered so the pair reads as a
+   composition rather than two rectangles. */
+.app-detail-screenshot--pair {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.app-detail-screenshot--pair img {
+  width: 48%;
+  max-width: 48%;
+  height: auto;
+  margin-inline: 0;
+  /* A light UI capture on a white page needs an edge; the shadow alone is
+     not enough to close it. */
+  border: 1px solid var(--color-border);
+}
+
+.app-detail-screenshot--pair img:last-child {
+  margin-top: var(--space-8);
+}
+
 /* Give a landscape screenshot the larger share of the row. Its detail is
    bound to its width, since the aspect ratio is fixed. Only once the row is
    wide enough to spare it, or the text column drops below a readable measure. */
@@ -968,6 +991,24 @@ ul {
 .app-detail-privacy-link {
   margin-top: var(--space-6);
   font-size: var(--text-sm) !important;
+}
+
+/* Stands in for the store button until an app is approved. */
+.app-detail-pending {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  opacity: 0.85;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+}
+
+/* Unofficial-status notice, kept quieter than the body copy. */
+.app-detail-disclaimer {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm) !important;
+  color: var(--color-text-muted);
 }
 
 .app-detail-privacy-link a {

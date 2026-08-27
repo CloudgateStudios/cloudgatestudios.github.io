@@ -1,5 +1,16 @@
 [
   {
+    "name": "Peach",
+    "slug": "peach",
+    "tagline": "Live women's pro baseball on your iOS Lock Screen",
+    "description": "Puts a live women's professional baseball game on your Lock Screen and in the Dynamic Island on your iOS device.",
+    "icon": "/assets/img/PeachIcon.png",
+    "url": "/Peach/",
+    "platform": ["ios"],
+    "status": "active",
+    "featured": true
+  },
+  {
     "name": "Bike Share Buddy",
     "slug": "bikesharebuddy",
     "tagline": "Quick access to many bike sharing programs",
