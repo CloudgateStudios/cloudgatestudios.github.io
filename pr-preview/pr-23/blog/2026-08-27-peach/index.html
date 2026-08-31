@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducing Peach — Cloudgate Studios</title>
+  <meta name="description" content="Peach follows women&#39;s professional baseball with a Live Activity that keeps the score on your Lock Screen and in the Dynamic Island.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/pr-preview/pr-23/assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/pr-preview/pr-23/assets/img/logo.svg">
+</head>
+<body>
+  <nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/pr-preview/pr-23/" class="nav-logo" aria-label="Cloudgate Studios">
+      <img src="/pr-preview/pr-23/assets/img/logo.svg" alt="Cloudgate Studios" width="160" height="36">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="/pr-preview/pr-23/#projects">Projects</a></li>
+      <li><a href="/pr-preview/pr-23/#about">About</a></li>
+      <li><a href="/pr-preview/pr-23/blog/">Blog</a></li>
+      <li><a href="/pr-preview/pr-23/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <main>
+    <article class="post-layout">
+  <header class="post-header">
+    <div class="container">
+      <div class="post-meta">
+        <a href="/pr-preview/pr-23/blog/" class="back-link">← All Posts</a>
+        <time datetime="2026-08-27">August 27, 2026</time>
+      </div>
+      <h1 class="post-title">Introducing Peach</h1>
+      
+      <p class="post-description">Peach follows women&#39;s professional baseball with a Live Activity that keeps the score on your Lock Screen and in the Dynamic Island.</p>
+      
+    </div>
+  </header>
+  <div class="post-body">
+    <div class="container">
+      <p>Today we are launching Peach, an unofficial iOS app for following the women's professional baseball league. The whole thing started from one observation: the best place to watch a score is not inside an app.</p>
+<h2>The Live Activity is the product</h2>
+<p>If you are following a game while doing something else, opening an app to check the score is friction. Peach puts the game on your Lock Screen instead. It appears at first pitch, updates itself as the game progresses, and lives in the Dynamic Island when your phone is unlocked.</p>
+<p>That is the feature the app exists for. You can go a whole season without opening Peach and still get everything you wanted from it.</p>
+<h2>The problem with building around a live game</h2>
+<p>Here is the constraint that shaped every other decision: the first season is short. One game most nights, and after the season ends, nothing until next year.</p>
+<p>Which means there is no live game roughly 95% of the time someone might open the app. A Live Activity that is smart about when to show up during a game is more useful and just in time.</p>
+<p>So &quot;no game right now&quot; is not an empty state to design around at the end. It is the default state, and it got the most attention. Every screen answers what you care about when nothing is on: when is the next game, what happened last night, where does my team stand, and who is leading the season.</p>
+<h2>Standings are computed, not fetched</h2>
+<p>One detail worth mentioning because it surprised me. The upstream data has schedules, scores, box scores, line scores, per-player batting and pitching lines which is great. But what it does not have is standings.</p>
+<p>So Peach derives them from completed games: wins and losses, percentage, run differential, streak, and last five. The numbers are validated against the team record embedded in each box score, and they match exactly.</p>
+<p>That computation lives on the server rather than in the app, deliberately. If a data source that does supply standings shows up next season, that becomes a server change instead of an app update sitting behind App Store review.</p>
+<h2>Unofficial, and staying that way</h2>
+<p>Peach is not affiliated with, endorsed by, or sponsored by the Women's Pro Baseball League. Team names are used descriptively, and no league logos or marks appear anywhere in the app. It is a fan project, built because the games deserved a better way to follow along.</p>
+<p>There are no accounts, no analytics, no advertising, and no third-party SDKs. The only things that leave your phone are a push token and, if you turn on &quot;only my team's games&quot;, which team you picked because that filter has to run before a notification is sent.</p>
+
+    </div>
+  </div>
+</article>
+
+  </main>
+  <footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; Cloudgate Studios. Chicago, IL.</p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/pr-preview/pr-23/#projects">Projects</a>
+      <a href="/pr-preview/pr-23/#about">About</a>
+      <a href="/pr-preview/pr-23/blog/">Blog</a>
+      <a href="/pr-preview/pr-23/#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+  <script src="/pr-preview/pr-23/assets/js/main.js"></script>
+</body>
+</html>
