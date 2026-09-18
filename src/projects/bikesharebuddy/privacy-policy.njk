@@ -1,32 +1,58 @@
 ---
 layout: base.njk
 title: Bike Share Buddy — Privacy Policy
-description: "Privacy policy for Bike Share Buddy."
+description: "Privacy policy for Bike Share Buddy. No data is collected, and your location never leaves your device."
 permalink: /BikeShareBuddy/privacyPolicy.htm
 ---
 
 <div class="app-detail-privacy-header">
   <div class="container">
-    <a href="{{ "/BikeShareBuddy/" | url }}" class="app-detail-back">← Bike Share Buddy</a>
-    <h1>Privacy Policy</h1>
-    <p>Bike Share Buddy</p>
+	<a href="{{ "/BikeShareBuddy/" | url }}" class="app-detail-back">← Bike Share Buddy</a>
+	<h1>Privacy Policy</h1>
+	<p>Bike Share Buddy</p>
   </div>
 </div>
 
 <div class="app-detail-privacy-body">
   <div class="container">
-    <p>This policy applies to all information collected by Bike Share Buddy.</p>
+	<p>This policy applies to all information collected by Bike Share Buddy. 
+	
+	<h2>The short version</h2>
+	<p>There are no accounts, no analytics, no advertising and no third-party tracking of any kind. Your location is used on your device to work out which bike stations are closest to you, and it stays there.</p>
 
-    <h2>Information we collect</h2>
-    <p>No personal information is collected.</p>
+	<h2>Information we collect</h2>
+	<p>No personal information is collected. Nothing you do in the app is sent to Cloudgate Studios, because there is no Cloudgate Studios server for it to be sent to.</p>
 
-    <h2>Information usage</h2>
-    <p>We use the information we collect to operate and improve our apps. We do not share your personal information with outside parties except to the extent necessary to accomplish functionality.</p>
+	<h2>Location</h2>
+	<p>If you grant location access, the app reads your position to sort bike stations by how far away they are and to centre the map near you.</p>
+	<p>That position is used entirely on your device. It is never transmitted anywhere, never stored beyond the running app, and never attached to any request the app makes. Requests for station data identify only the bike network you selected — for example Citi Bike or Divvy — and contain nothing about where you are within it.</p>
+	<p>Location access is optional. If you decline it the app still works: it shows the stations in your selected network and tells you plainly that the list is not sorted by distance. You can change your mind at any time in the iOS Settings app.</p>
 
-    <h2>Your consent</h2>
-    <p>By using our site or apps, you consent to our privacy policy.</p>
+	<h2>Settings</h2>
+	<p>Your selected bike network, how many stations you want listed, and your light or dark theme preference are stored on your device using the standard iOS settings store. They are not synced to us, and they are removed when you delete the app.</p>
 
-    <h2>Contacting us</h2>
-    <p>If you have questions regarding this privacy policy, you may email <a href="mailto:privacy@cloudgatestudios.com">privacy@cloudgatestudios.com</a>.</p>
+	<h2>Bike station data</h2>
+	<p>Station names, locations, and bike and dock availability come from the <a href="https://citybik.es">CityBikes API</a>, a third-party service not operated by Cloudgate Studios. When the app requests station data, CityBikes receives that request as any website would, including your device's IP address — unavoidable for any internet connection. The request itself contains only the identifier of the bike network you chose. How CityBikes handles it is covered by their practices, not this policy.</p>
+
+	<h2>Spotlight search</h2>
+	<p>When you view a station's details, the app offers that station to iOS so it can appear in Spotlight search. This is handled by iOS, and the information involved is the station's public name and location — nothing about you. Cloudgate Studios never sees it. Deleting the app removes these entries.</p>
+
+	<h2>Sharing a station</h2>
+	<p>If you tap Share Station, iOS opens its standard share sheet and you choose where the text goes. The app does not send it anywhere on its own and keeps no record of what you shared or with whom.</p>
+
+	<h2>Information usage</h2>
+	<p>We use the information we collect to operate and improve our apps. We do not share your personal information with outside parties except to the extent necessary to accomplish functionality.</p>
+
+	<h2>Children</h2>
+	<p>Bike Share Buddy is suitable for all ages and does not knowingly collect information from anyone, including children under 13. As no personal information is collected at all, there is nothing to collect from any user regardless of age.</p>
+
+	<h2>Your consent</h2>
+	<p>By using our site or apps, you consent to our privacy policy.</p>
+
+	<h2>Changes to this policy</h2>
+	<p>If the app changes in a way that affects this policy, this page will be updated. Should a future version ever begin collecting anything, that change would be described here before it shipped. Last updated 18 September 2026.</p>
+
+	<h2>Contacting us</h2>
+	<p>If you have questions regarding this privacy policy, you may email <a href="mailto:privacy@cloudgatestudios.com">privacy@cloudgatestudios.com</a>.</p>
   </div>
 </div>
