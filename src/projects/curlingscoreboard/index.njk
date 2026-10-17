@@ -30,7 +30,7 @@ permalink: /CurlingScoreboard/
   <!-- Description: the free, open-it-and-go case -->
   <div class="app-detail-description">
     <div class="container">
-      <div class="app-detail-description-inner app-detail-description-inner--no-media">
+      <div class="app-detail-description-inner app-detail-description-inner--wide-media">
         <div class="app-detail-description-text">
           <h2>Open it and keep score</h2>
           <p>Curling Scoreboard runs in any browser. Open it on whatever device is sitting by the sheet, tap in the score as the ends go by, and that is the whole thing. No install, no account, nothing to set up.</p>
@@ -40,24 +40,16 @@ permalink: /CurlingScoreboard/
             Visit curlingscoreboard.app
           </a>
         </div>
-        {#
-          Screenshot pending: a scoreboard mid-game on a sheet-side display,
-          showing the curling-style line score, both team names under their
-          rock colors, and the hammer indicator. Drop the capture in
-          src/assets/img/, uncomment, and swap --no-media on the row above
-          for --wide-media so the two columns come back.
-
-          <figure class="app-detail-screenshot app-detail-screenshot--wide">
-            <img
-              src="{{ "/assets/img/CurlingScoreboardGameScreenshot.png" | url }}"
-              alt="A Curling Scoreboard game in progress, showing the line score end by end, both team names on their rock colors, and which team holds the hammer."
-              width="2102"
-              height="1510"
-              loading="lazy"
-            >
-            <figcaption>The scoreboard itself, on the sheet-side display.</figcaption>
-          </figure>
-        #}
+        <figure class="app-detail-screenshot app-detail-screenshot--wide">
+          <img
+            src="{{ "/assets/img/CurlingScoreboardGameScreenshot.png" | url }}"
+            alt="A Curling Scoreboard game in progress, with red leading yellow 6 to 4 in the seventh end, each end's score laid out beneath the totals, and markers showing which team has the hammer."
+            width="800"
+            height="573"
+            loading="lazy"
+          >
+          <figcaption>A game at the seventh end. Every end is kept below the totals, the way a club scoreboard reads.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
