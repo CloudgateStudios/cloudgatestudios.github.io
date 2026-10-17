@@ -1055,6 +1055,37 @@ ul {
   line-height: 1.7;
 }
 
+/* Why a project exists, told in the maker's own voice. Sits below the
+   description row, on the alternate surface so it reads as an aside rather
+   than more product copy. */
+.app-detail-story {
+  padding: var(--space-24) 0;
+  background-color: var(--color-surface);
+}
+
+.app-detail-story-inner {
+  max-width: 680px;
+}
+
+.app-detail-story h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+.app-detail-story p {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.app-detail-story p:last-child {
+  margin-bottom: 0;
+}
+
 /* Privacy policy page */
 .app-detail-privacy-header {
   margin-top: var(--nav-height);
