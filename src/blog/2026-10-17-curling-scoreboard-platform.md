@@ -34,7 +34,7 @@ A club has sheets, and each sheet has a scoreboard paired to it. An admin genera
 
 Once paired, the scoreboard reports on itself — app version, platform, screen size, time zone — every half hour. The portal shows each sheet's scoreboard as online or offline, flags one running an old build as "Update pending", and surfaces the last failed sync, which is otherwise invisible because scoring never blocks on the network.
 
-Disconnecting is deliberately hard to do by accident, because scoreboards sit in public where anyone can tap at them. The setup screen just says "Connected as club – sheet". Press and hold that for four seconds, with a ring filling in as you go, and you get a dialog that asks for the club's admin PIN before it will unpair. There's nothing about the connection in Settings at all.
+Disconnecting is deliberately hard to do by accident, because scoreboards sit in public where anyone can tap at them. The setup screen just says "Connected as club – sheet". Press and hold that for four seconds, with a ring filling in as you go, and you get a dialog with a Disconnect button that asks for the club's admin PIN before it will let go of the sheet. There's nothing about the connection in Settings at all.
 
 Clubs that play with colors other than red and yellow pick theirs in the portal, and the paired scoreboards follow. The colors are read when a game starts, so a change never lands in the middle of one, and each scoreboard remembers the last colors it saw — so it still comes up right if it boots before the network does.
 
