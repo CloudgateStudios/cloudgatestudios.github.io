@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Meal Plan icon">
+  <title>Meal Plan</title>
+  <defs>
+    <linearGradient id="mpTile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fc9e4d"/>
+      <stop offset="1" stop-color="#ed5c3d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tile. Left square; the site's CSS applies the squircle radius. -->
+  <rect width="1024" height="1024" fill="url(#mpTile)"/>
+
+  <!-- Plate and well, from the app's AppIcon layers. -->
+  <circle cx="512" cy="512" r="250" fill="#fffdf8"/>
+  <circle cx="512" cy="512" r="170" fill="#faeddb"/>
+
+  <!-- Fork -->
+  <g fill="#ffffff">
+    <rect x="152" y="454" width="46" height="380" rx="23"/>
+    <rect x="130" y="374" width="90" height="110" rx="30"/>
+    <rect x="132" y="194" width="22" height="230" rx="11"/>
+    <rect x="160" y="194" width="22" height="230" rx="11"/>
+    <rect x="188" y="194" width="22" height="230" rx="11"/>
+  </g>
+
+  <!-- Knife -->
+  <g fill="#ffffff">
+    <rect x="826" y="504" width="46" height="330" rx="23"/>
+    <path d="M820 524 L878 524 C915 384 905 244 860 194 C845 179 828 179 820 194 Z"/>
+  </g>
+</svg>

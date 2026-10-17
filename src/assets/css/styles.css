@@ -1017,6 +1017,75 @@ ul {
   text-underline-offset: 2px;
 }
 
+/* A description row whose screenshot has not been taken yet holds only its
+   text, and the two-column grid would leave half of it empty. Collapse it to
+   one column held to a readable measure. Swap this for --wide-media once the
+   media is in place. */
+.app-detail-description-inner--no-media {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+/* Feature grid: what a product offers beyond its headline, broken into
+   cards. Used on app detail pages that have more to say than the single
+   description row holds. */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.feature-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.feature-card-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  line-height: 1.3;
+}
+
+.feature-card p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* Why a project exists, told in the maker's own voice. Sits below the
+   description row, on the alternate surface so it reads as an aside rather
+   than more product copy. */
+.app-detail-story {
+  padding: var(--space-24) 0;
+  background-color: var(--color-surface);
+}
+
+.app-detail-story-inner {
+  max-width: 680px;
+}
+
+.app-detail-story h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+.app-detail-story p {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.app-detail-story p:last-child {
+  margin-bottom: 0;
+}
+
 /* Privacy policy page */
 .app-detail-privacy-header {
   margin-top: var(--nav-height);
