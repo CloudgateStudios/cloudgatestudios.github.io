@@ -1,0 +1,72 @@
+---
+layout: base.njk
+title: Meal Plan
+description: "Plan the week's meals with your household and get a grocery list that builds itself."
+permalink: /MealPlan/
+appStoreUrl: ""
+---
+
+<div class="app-detail">
+
+  <!-- Hero -->
+  <div class="app-detail-hero">
+    <div class="container">
+      <a href="{{ "/" | url }}" class="app-detail-back">← Cloudgate Studios</a>
+      <div class="app-detail-hero-content">
+        <div class="app-detail-icon-wrap">
+          <img src="{{ "/assets/img/MealPlanIcon.svg" | url }}" alt="Meal Plan icon" width="120" height="120">
+        </div>
+        <div class="app-detail-hero-text">
+          <h1 class="app-detail-title">Meal Plan</h1>
+          <p class="app-detail-tagline">Weekly menus and grocery lists, shared with your household</p>
+          {% if appStoreUrl %}
+          <a href="{{ appStoreUrl }}" class="store-btn store-btn--large" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on the App Store
+          </a>
+          {% else %}
+          <p class="app-detail-pending">Coming soon to the App Store</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="app-detail-description">
+    <div class="container">
+      <div class="app-detail-description-inner">
+        <div class="app-detail-screenshot app-detail-screenshot--pair">
+          <img src="{{ "/assets/img/MealPlanPlanScreenshot.jpg" | url }}" alt="The Meal Plan week view, showing breakfast, lunch and dinner laid out across Friday and Saturday" width="560" height="1216" loading="lazy">
+          <img src="{{ "/assets/img/MealPlanGroceriesScreenshot.jpg" | url }}" alt="The Meal Plan grocery list, grouped by aisle with amounts merged across recipes" width="560" height="1216" loading="lazy">
+        </div>
+        <div class="app-detail-description-text">
+          <h2>The week, the list, and everyone who cooks</h2>
+          <p>Put a recipe on every day it's eaten, change a single dinner without redoing the week, and copy last week's plan when it was a good one. The whole week fits on screen on iPad and Mac, and goes day by day on iPhone.</p>
+          <p>One tap turns that plan into a grocery list. Amounts are scaled to how many people you're feeding, the same ingredient from three recipes becomes one line, and everything is sorted by aisle so you walk the store once. Staples you always have, like salt and pepper, stay off the list.</p>
+          <p>Save recipes from most recipe sites, paste one in from a message or a note, or bring your collection over from another app. On devices with Apple Intelligence, pasted text is sorted into ingredients and steps on your device.</p>
+          <p>Invite the people you live with and everyone sees the same recipes, plan and list. There is no account to make: Meal Plan uses the iCloud account already on your devices, so your data stays in your own iCloud. There are no ads, no tracking and no analytics.</p>
+          {% if appStoreUrl %}
+          <a href="{{ appStoreUrl }}" class="store-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          {% endif %}
+          <p class="app-detail-privacy-link"><a href="{{ "/MealPlan/privacy-policy/" | url }}">Privacy Policy</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why it exists -->
+  <div class="app-detail-story">
+    <div class="container">
+      <div class="app-detail-story-inner">
+        <h2>Why I built it</h2>
+        <p>My wife had been planning our meals in an app that had quietly stopped getting updates. It still worked, but it was showing its age, and each year it felt further from the phone it was running on.</p>
+        <p>So I built the replacement. I wanted something that feels native on iOS, that you can open on a Tuesday night and use without thinking about it, and that I'll keep maintained for as long as we're cooking from it. Nearly every feature in Meal Plan started as something one of us wanted while standing in the kitchen.</p>
+      </div>
+    </div>
+  </div>
+
+</div>

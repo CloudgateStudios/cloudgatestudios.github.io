@@ -1,5 +1,16 @@
 [
   {
+    "name": "Meal Plan",
+    "slug": "mealplan",
+    "tagline": "Weekly menus and grocery lists, shared with your household",
+    "description": "Plans the week's meals with everyone you live with and turns that plan into a grocery list that scales, merges and sorts itself by aisle. Your recipes, plan and list live in your own iCloud account.",
+    "icon": "/assets/img/MealPlanIcon.svg",
+    "url": "/MealPlan/",
+    "platform": ["ios", "mac"],
+    "status": "upcoming",
+    "featured": true
+  },
+  {
     "name": "Peach",
     "slug": "peach",
     "tagline": "Live women's pro baseball on your iOS Lock Screen",
