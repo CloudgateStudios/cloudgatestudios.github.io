@@ -159,8 +159,8 @@ A **webhook** covers the other case: every finished game posted to a URL, which 
 The nice property of both: they're driven by what someone already does, which is tap in the score. Nobody has to re-enter results anywhere.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardWebhookScreenshot.webp" alt="The completed game webhook settings, showing the destination URL masked, that every completed game is posted with the default message in the club's time zone, and when the last game was delivered." width="1440" height="341" loading="lazy">
-  <figcaption>The webhook setting, with the last delivery recorded. A quiet channel and a broken URL look different here.</figcaption>
+  <img src="/assets/img/CurlingScoreboardIntegrationsScreenshot.webp" alt="The portal's Integrations settings: an API key with a link to the API documentation, and below it the completed game webhook with its destination URL masked, what it posts, and when the last game was delivered." width="1440" height="900" loading="lazy">
+  <figcaption>Both routes out, in one place. The webhook records its last delivery, so a quiet channel and a broken URL look different.</figcaption>
 </figure>
 
 <figure>
