@@ -10,15 +10,10 @@ That version still exists, and it still works exactly that way. But over the pas
 
 This post is a tour of what's there now. Everything described here is live in production.
 
-<!--
-SCREENSHOT 1 — the hero, for the top of this post
-What: a paired scoreboard mid-game on a real sheet-side display, showing the
-curling-style line score, both team names under their rock colors, and the
-hammer indicator.
-Why: establishes "this is still the scoreboard you know" before the post
-starts talking about platforms and portals.
-Suggested file: CurlingScoreboardGameScreenshot.png / .jpg
--->
+<figure>
+  <img src="/assets/img/CurlingScoreboardGameScreenshot.png" alt="A Curling Scoreboard game in progress, with red leading yellow 6 to 4 in the seventh end, each end's score laid out beneath the totals, and markers showing which team has the hammer." width="800" height="573">
+  <figcaption>The scoreboard itself. This part has not changed.</figcaption>
+</figure>
 
 ## The scoreboard still works alone
 
@@ -38,15 +33,15 @@ Disconnecting is deliberately hard to do by accident, because scoreboards sit in
 
 Clubs that play with colors other than red and yellow pick theirs in the portal, and the paired scoreboards follow. The colors are read when a game starts, so a change never lands in the middle of one, and each scoreboard remembers the last colors it saw — so it still comes up right if it boots before the network does.
 
-<!--
-SCREENSHOT 2 — Sheets & Games tab in the admin portal
-What: the club page with several sheets listed, at least one live game in
-progress, scoreboard status badges visible (online / offline / Update
-pending), and the recent games list beside it.
-Why: this is the single best "it's a managed system now" image. One frame
-shows live scores, device health and history together.
-Suggested file: CurlingScoreboardAdminSheetsScreenshot.png
--->
+<figure>
+  <img src="/assets/img/CurlingScoreboardAdminSheetsScreenshot.webp" alt="The admin portal's Sheets and Games tab, showing six sheets with live games in progress, each scoreboard's version and last-seen time, and the last seven days of completed games beside them." width="1440" height="900" loading="lazy">
+  <figcaption>Every sheet at once: what is live, which scoreboards are online, and what has been played this week.</figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/img/CurlingScoreboardRockColorsScreenshot.webp" alt="The portal's scoreboard settings, with swatches for the first and second rock colors and a preview of how a score looks on the club's scoreboards." width="1440" height="900" loading="lazy">
+  <figcaption>Clubs that do not play red and yellow pick their colors here, with a preview of the result.</figcaption>
+</figure>
 
 ## Leagues, and teams that are actually named
 
@@ -61,7 +56,7 @@ Once teams are picked, both names sit under the total scores on their rock color
 The league and each team's ID ride along with the game, including the external ID from the club's own league software if the import supplied one. That's what makes the scores useful to anything downstream.
 
 <!--
-SCREENSHOT 3 — the team picker on the scoreboard
+STILL TO CAPTURE — the team picker on the scoreboard
 What: the full screen league team picker, grid of team buttons, with one team
 already selected in the top slot so the two color slots are visible.
 Why: shows the "built for a touchscreen by the ice" design decision better
@@ -69,13 +64,23 @@ than any description does.
 Suggested file: CurlingScoreboardTeamPickerScreenshot.png
 -->
 
+<figure>
+  <img src="/assets/img/CurlingScoreboardLeaguesScreenshot.webp" alt="The portal's Leagues tab, with the club's seven leagues laid out on a weekly calendar from Sunday to Saturday and listed below with their team counts and draw times." width="1440" height="1683" loading="lazy">
+  <figcaption>The club's week. Draw times are what a scoreboard checks its own clock against to offer the right league.</figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/img/CurlingScoreboardLeagueTeamsScreenshot.webp" alt="A league's page in the portal, showing its season dates, its two Monday draws, and its twelve teams each with a name and an external ID from the club's own league software." width="1440" height="900" loading="lazy">
+  <figcaption>One league: its season, its draws, and its roster. The second column is each team's ID in the club's own league software.</figcaption>
+</figure>
+
 <!--
-SCREENSHOT 4 — CSV import preview
+STILL TO CAPTURE — CSV import preview
 What: the league import step showing the diff — teams to be added, renamed
 and removed — before anything is written.
 Why: speaks directly to the club admin who has a roster in a spreadsheet and
 wants to know this won't wreck their history.
-Suggested file: CurlingScoreboardLeagueImportScreenshot.png
+Suggested file: CurlingScoreboardLeagueImportScreenshot.webp
 -->
 
 ## Bonspiels
@@ -88,27 +93,24 @@ Coordinators plan it on a draw board — draws down the side, sheets across. Tap
 
 You don't have to build a bracket from scratch. A knockout template fills in a whole bonspiel — up to 64 teams across as many as four events, with losers dropping down the way most club spiels run it, byes handled so no team gets two. A pools template splits teams into round robins and feeds the top finishers into a playoff. What either one produces is an ordinary plan you can then edit by hand. And Duplicate copies a bonspiel's events, draws and games onto new dates to run the whole thing again next year.
 
+<figure>
+  <img src="/assets/img/CurlingScoreboardBonspielSetupScreenshot.webp" alt="A bonspiel's setup page, with its dates and default number of ends, its four events each with their own end count, and its twenty-four teams listed down the right." width="1440" height="900" loading="lazy">
+  <figcaption>The spiel itself: dates, events and teams. Duplicate copies all of it onto next year's dates.</figcaption>
+</figure>
+
 The part that makes it work on the ice: during the bonspiel, each sheet's scoreboard offers that sheet's game in the current draw. A side that isn't known yet shows where it's coming from — "Winner of A3", "Pool A #1" — and fills in on its own as results land. The scoreboard also records who actually played, which wins over the plan, so a last minute team swap still sends the right team on to the next game.
 
 Because a bonspiel weekend is its own job, there's a bonspiel admin role that can plan spiels and read game history and change nothing else. Hand it to the spiel coordinator and nothing else about the club is exposed.
 
-<!--
-SCREENSHOT 5 — the bonspiel draw board
-What: the planning board with draws down the side and sheets across, a few
-draws filled in, ideally with some sides still showing "Winner of ..."
-placeholders.
-Why: the clearest proof that this handles a real spiel and not just a single
-game. Likely the most persuasive single screenshot in the post.
-Suggested file: CurlingScoreboardBonspielBoardScreenshot.png
--->
+<figure>
+  <img src="/assets/img/CurlingScoreboardBonspielBoardScreenshot.webp" alt="The bonspiel draw board, with ten draws down the side and six sheets across. Early games name their teams and scores; later ones read Winner of A1 or Loser of A3 until the result that fills them in arrives." width="1440" height="1420" loading="lazy">
+  <figcaption>A three-day spiel on one board. Games that have not been played yet say where their teams are coming from.</figcaption>
+</figure>
 
-<!--
-SCREENSHOT 6 — the bracket view
-What: an A event laid out in rounds with a winner named, or a pool showing
-its standings table.
-Why: the thing a spiel coordinator will look for immediately.
-Suggested file: CurlingScoreboardBracketScreenshot.png
--->
+<figure>
+  <img src="/assets/img/CurlingScoreboardBracketsScreenshot.webp" alt="The bracket view, showing the A, B, C and D events each laid out in rounds, with completed games carrying their scores and the finals still waiting on the winners of earlier games." width="1440" height="2640" loading="lazy">
+  <figcaption>The same spiel as brackets. Nothing marks a final: it is the one game in an event whose winner goes nowhere else.</figcaption>
+</figure>
 
 ## Screens around the club
 
@@ -123,7 +125,7 @@ The **bonspiel screen** is for a spiel weekend: the draw that's on right now as 
 Each screen gets its own link from the portal, and the link's URL never has to change. What the screen shows is a setting on the link, so you can point a TV at a different sheet or switch a stream from the score bug to the warm room from the portal — mid-stream, if it comes to that — and the screen follows within seconds. The screens are built to be left running for weeks: everything retries, and a screen that loses its connection keeps showing the last scores it had rather than going blank.
 
 <!--
-SCREENSHOT 7 — the warm room screen on a TV
+STILL TO CAPTURE — the warm room screen on a TV
 What: ideally a photo of the real screen on the wall in a club, several
 sheets with games in progress. A clean browser capture works too, but the
 photo sells it.
@@ -132,7 +134,7 @@ Suggested file: CurlingScoreboardWarmRoomScreenshot.jpg
 -->
 
 <!--
-SCREENSHOT 8 — the score bug over stream video
+STILL TO CAPTURE — the score bug over stream video
 What: the transparent score bug composited over actual ice footage in OBS,
 not on a blank background.
 Why: the bug on its own reads as a small graphic; over video it reads as a
@@ -141,13 +143,10 @@ obvious.
 Suggested file: CurlingScoreboardScoreBugScreenshot.png
 -->
 
-<!--
-SCREENSHOT 9 — the Displays tab
-What: the portal's Displays tab with two or three links configured (e.g.
-"Warm room TV", "Sheet 3 stream"), showing the per-link settings.
-Why: supports the "one link per screen, re-point it from here" claim.
-Suggested file: CurlingScoreboardDisplaysScreenshot.png
--->
+<figure>
+  <img src="/assets/img/CurlingScoreboardDisplaysScreenshot.webp" alt="The portal's Displays tab, listing four links — a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV — each with what it shows and when it was last used, beside the warm room screen's title and logo." width="1440" height="900" loading="lazy">
+  <figcaption>One link per screen. What each one shows is a setting here, so a TV can be re-pointed without touching the TV.</figcaption>
+</figure>
 
 ## Getting the scores out
 
@@ -159,13 +158,24 @@ A **webhook** covers the other case: every finished game posted to a URL, which 
 
 The nice property of both: they're driven by what someone already does, which is tap in the score. Nobody has to re-enter results anywhere.
 
+<figure>
+  <img src="/assets/img/CurlingScoreboardWebhookScreenshot.webp" alt="The completed game webhook settings, showing the destination URL masked, that every completed game is posted with the default message in the club's time zone, and when the last game was delivered." width="1440" height="341" loading="lazy">
+  <figcaption>The webhook setting, with the last delivery recorded. A quiet channel and a broken URL look different here.</figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/img/CurlingScoreboardGameHistoryScreenshot.webp" alt="A sheet's game history with one game expanded to its end-by-end line score, and a note underneath reading Webhook delivered 200." width="1440" height="900" loading="lazy">
+  <figcaption>Each completed game keeps its ends, and what happened when it was posted.</figcaption>
+</figure>
+
 <!--
-SCREENSHOT 10 — webhook results in Discord or Slack
+STILL TO CAPTURE — webhook results in Discord or Slack
 What: three or four completed game results posted in a real channel, using a
 club's custom message format.
 Why: instantly legible, and it's the feature most likely to make a club
-realize they can stop manually posting results.
-Suggested file: CurlingScoreboardWebhookScreenshot.png
+realize they can stop manually posting results. The settings card above
+proves the feature exists; the channel shows why a club would want it.
+Suggested file: CurlingScoreboardWebhookPostsScreenshot.webp
 -->
 
 ## Keeping it running
