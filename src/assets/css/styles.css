@@ -724,6 +724,13 @@ ul {
   margin-bottom: var(--space-6);
 }
 
+/* A transparent capture, such as the stream score bug, has no edge to close.
+   A border would box in the empty space around it instead of the image. */
+.post-body img.is-transparent,
+.app-detail-screenshot img.is-transparent {
+  border: none;
+}
+
 .post-body figure {
   margin: 0 0 var(--space-8);
 }
