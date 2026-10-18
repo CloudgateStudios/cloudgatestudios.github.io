@@ -88,14 +88,13 @@
 <h2>Bonspiels</h2>
 <p>Bonspiels were the hard part, and the most recent.</p>
 <p>The format changes from one bonspiel to the next, so the system doesn't store formats. A bonspiel is a list of games, and each side of each game says where its team comes from: a team the coordinator placed, the winner or loser of a game in an earlier draw, a finishing place out of a pool, or not decided yet. An A/B/C knockout, a round robin into a playoff, and games placed entirely by hand are all just different ways of writing that down.</p>
-<p>Coordinators plan it on a draw board — draws down the side, sheets across. Tap a game to set its teams or its result, tap an empty cell to add one. Beside that, a bracket view lays out each event in rounds and names the winner once there is one. Pools show standings instead, ranked on points, then on the games between the tied teams, and then by an order the coordinator sets after a last stone draw or a tiebreak game.</p>
-<p>You don't have to build a bracket from scratch. A knockout template fills in a whole bonspiel — up to 64 teams across as many as four events, with losers dropping down the way most club spiels run it, byes handled so no team gets two. A pools template splits teams into round robins and feeds the top finishers into a playoff. What either one produces is an ordinary plan you can then edit by hand. And Duplicate copies a bonspiel's events, draws and games onto new dates to run the whole thing again next year.</p>
+<p>Coordinators plan it on a draw board. Tap a game to set its teams or its result, tap an empty cell to add one. Beside that, a bracket view lays out each event in rounds and names the winner once there is one. Pools show standings instead, ranked on points, then on the games between the tied teams, and then by an order the coordinator sets after a last stone draw or a tiebreak game.</p>
+<p>You don't have to build a bracket from scratch. A knockout template fills in a whole bonspiel for up to 64 teams across as many as four events, with losers dropping down the way most club spiels run it, with byes handled so no team gets two. A pools template splits teams into round robins and feeds the top finishers into a playoff. What either one produces is an ordinary plan you can then edit by hand. And Duplicate copies a bonspiel's events, draws and games onto new dates to run the whole thing again next year.</p>
 <figure>
   <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardBonspielSetupScreenshot.webp" alt="A bonspiel's setup page, with its dates and default number of ends, its four events each with their own end count, and its twenty-four teams listed down the right." width="1440" height="900" loading="lazy">
   <figcaption>The spiel itself: dates, events and teams. Duplicate copies all of it onto next year's dates.</figcaption>
 </figure>
-<p>The part that makes it work on the ice: during the bonspiel, each sheet's scoreboard offers that sheet's game in the current draw. A side that isn't known yet shows where it's coming from — &quot;Winner of A3&quot;, &quot;Pool A #1&quot; — and fills in on its own as results land. The scoreboard also records who actually played, which wins over the plan, so a last minute team swap still sends the right team on to the next game.</p>
-<p>Because a bonspiel weekend is its own job, there's a bonspiel admin role that can plan spiels and read game history and change nothing else. Hand it to the spiel coordinator and nothing else about the club is exposed.</p>
+<p>But planning is only the first part. During the bonspiel, each sheet's scoreboard offers that sheet's game in the current draw. A side that isn't known yet shows where it's coming from — &quot;Winner of A3&quot;, &quot;Pool A #1&quot; — and fills in on its own as results land. The scoreboard also records who actually played, which wins over the plan, so a last minute team swap still sends the right team on to the next game.</p>
 <figure>
   <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardBonspielBoardScreenshot.webp" alt="The bonspiel draw board, with ten draws down the side and six sheets across. Early games name their teams and scores; later ones read Winner of A1 or Loser of A3 until the result that fills them in arrives." width="1440" height="1420" loading="lazy">
   <figcaption>A three-day spiel on one board. Games that have not been played yet say where their teams are coming from.</figcaption>
@@ -104,12 +103,17 @@
   <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardBracketsScreenshot.webp" alt="The bracket view, showing the A, B, C and D events each laid out in rounds, with completed games carrying their scores and the finals still waiting on the winners of earlier games." width="1440" height="2640" loading="lazy">
   <figcaption>The same spiel as brackets. Nothing marks a final: it is the one game in an event whose winner goes nowhere else.</figcaption>
 </figure>
+<p>Because a bonspiel weekend is its own job, there's a bonspiel admin role that can plan spiels and read game history and change nothing else. Hand it to the spiel coordinator and nothing else about the club is exposed.</p>
 <h2>Screens around the club</h2>
 <p>Scores are more useful on a wall than in a browser tab, so there are three screens a club can put up, and all of them read from the live games as they're entered.</p>
-<p>The <strong>warm room screen</strong> shows every sheet at once on a TV. It figures out the best column layout for however many sheets you have and sizes everything from there, so it fills a 1080p screen, a 4K screen, or one turned on its side, without scrolling. Each card has the sheet, the end or Final, the league, and both teams on their rock colors with the hammer. An idle sheet dims and says &quot;No game&quot;. A club can put its own title and logo in the title bar. There's a <code>full</code> view that shows every game end by end like the scoreboard itself, and a cycle view that alternates the two. And the mouse pointer hides after three seconds of being still, so the mouse someone left by the TV doesn't sit on top of the scores.</p>
-<p>The <strong>score bug</strong> is for streams. It's a transparent page you drop into OBS as a browser source, showing the two teams, their colors, the scores, the hammer, and the end — and hiding itself entirely when the sheet is idle. It scales from half size to four times, and the line under the scores can show the sheet, the league, or nothing. There's a preview mode for setting it up, which shows a faded stand-in at the bug's real size when no game is on, so you can place it in OBS between draws instead of guessing.</p>
-<p>The <strong>bonspiel screen</strong> is for a spiel weekend: the draw that's on right now as large cards with live scores, the next draw as a list, a full schedule grid, or the brackets, cycling through them if you like.</p>
-<p>Each screen gets its own link from the portal, and the link's URL never has to change. What the screen shows is a setting on the link, so you can point a TV at a different sheet or switch a stream from the score bug to the warm room from the portal — mid-stream, if it comes to that — and the screen follows within seconds. The screens are built to be left running for weeks: everything retries, and a screen that loses its connection keeps showing the last scores it had rather than going blank.</p>
+<figure>
+  <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardDisplaysScreenshot.webp" alt="The portal's Displays tab, listing four links — a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV — each with what it shows and when it was last used, beside the warm room screen's title and logo." width="1440" height="900" loading="lazy">
+  <figcaption>One link per screen. What each one shows is a setting here, so a TV can be re-pointed without touching the TV.</figcaption>
+</figure>
+<p>The <strong>warm room screen</strong> shows every sheet at once on a TV. It figures out the best column layout for however many sheets you have and sizes everything from there, so it fills a 1080p screen, a 4K screen, or one turned on its side, without scrolling. Each card has the sheet, the current end or Final, the league, and both teams on their rock colors with the hammer. An idle sheet dims and says &quot;No game&quot;. A club can put its own title and logo in the title bar for a bit of customization.</p>
+<p>The <strong>score bug</strong> is for streams. It's a transparent page you drop into your streaming software as a browser source, showing the two teams, their colors, the scores, the hammer, and the end. And it hides itself entirely when the sheet is idle. There's a preview mode for setting it up, which shows a faded stand-in at the bug's real size when no game is on, so you can place it in OBS between draws instead of guessing.</p>
+<p>The <strong>bonspiel screen</strong> is for a spiel weekend. This will cycle through the draw that's on right now as large cards with live scores, the next draw as a list, a full schedule grid, and the brackets.</p>
+<p>Each screen gets its own link from the portal, and the link's URL never has to change. What the screen shows is a setting on the link, so you can point a TV at a different sheet or switch a stream from the score bug to the warm room from the portal and the screen follows within seconds. The screens are built to be left running for weeks. Everything retries, and a screen that loses its connection keeps showing the last scores it had rather than going blank until it reconnects.</p>
 <!--
 STILL TO CAPTURE — the warm room screen on a TV
 What: ideally a photo of the real screen on the wall in a club, several
@@ -127,40 +131,20 @@ broadcast. Showing the OBS source panel alongside would also make the setup
 obvious.
 Suggested file: CurlingScoreboardScoreBugScreenshot.png
 -->
-<figure>
-  <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardDisplaysScreenshot.webp" alt="The portal's Displays tab, listing four links — a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV — each with what it shows and when it was last used, beside the warm room screen's title and logo." width="1440" height="900" loading="lazy">
-  <figcaption>One link per screen. What each one shows is a setting here, so a TV can be re-pointed without touching the TV.</figcaption>
-</figure>
 <h2>Getting the scores out</h2>
-<p>Two ways, depending on what you're doing.</p>
-<p>A <strong>read-only REST API</strong> covers the club, its sheets, live and completed games, its leagues and its bonspiels. Live games carry the ends played so far, not just the totals. League games carry team IDs — including the external ones from your league software — so a result can be matched back to a team automatically. Every request needs the club's API key. It's documented with OpenAPI at <a href="https://curlingscoreboard.app/api-docs/"><code>/api-docs/</code></a>, and there's a test page in the portal for trying calls without writing any code. Club websites are expected to call it straight from the browser, so it's set up to allow that.</p>
-<p>A <strong>webhook</strong> covers the other case: every finished game posted to a URL, which in practice means a Slack or Discord channel. Clubs can post every game, only league games, or only bonspiel games, and write their own message with variables — <code>{team1}</code>, <code>{league}</code>, <code>{date}</code> and so on — in their own time zone. Discord posts are sent with notifications suppressed, so results land in the channel without buzzing everyone's phone, and any <code>@everyone</code> typed into a template pings nobody. A game posts exactly once, failures are retried, and the outcome of each post shows up in the portal next to the game so you can tell a quiet channel from a broken URL.</p>
+<p>Based on your needs we have two options.</p>
+<p>A <strong>read-only REST API</strong> covers the club, its sheets, live and completed games, its leagues and its bonspiels. Every request needs the club's API key. It's documented at <a href="https://curlingscoreboard.app/api-docs/"><code>/api-docs/</code></a>, and there's a test page in the portal for trying calls without writing any code.</p>
+<p>A <strong>webhook</strong> covers a simpler case: every finished game posted to a URL, which in practice means a Slack or Discord channel. Clubs can post every game, only league games, or only bonspiel games, and write their own message with variables. Discord posts are sent with notifications suppressed, so results land in the channel without buzzing everyone's phone.</p>
 <p>The nice property of both: they're driven by what someone already does, which is tap in the score. Nobody has to re-enter results anywhere.</p>
 <figure>
   <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardIntegrationsScreenshot.webp" alt="The portal's Integrations settings: an API key with a link to the API documentation, and below it the completed game webhook with its destination URL masked, what it posts, and when the last game was delivered." width="1440" height="900" loading="lazy">
   <figcaption>Both routes out, in one place. The webhook records its last delivery, so a quiet channel and a broken URL look different.</figcaption>
 </figure>
-<figure>
-  <img src="/pr-preview/pr-31/assets/img/CurlingScoreboardGameHistoryScreenshot.webp" alt="A sheet's game history with one game expanded to its end-by-end line score, and a note underneath reading Webhook delivered 200." width="1440" height="900" loading="lazy">
-  <figcaption>Each completed game keeps its ends, and what happened when it was posted.</figcaption>
-</figure>
-<!--
-STILL TO CAPTURE — webhook results in Discord or Slack
-What: three or four completed game results posted in a real channel, using a
-club's custom message format.
-Why: instantly legible, and it's the feature most likely to make a club
-realize they can stop manually posting results. The settings card above
-proves the feature exists; the channel shows why a club would want it.
-Suggested file: CurlingScoreboardWebhookPostsScreenshot.webp
--->
 <h2>Keeping it running</h2>
 <p>A few things that aren't features so much as the reason none of this needs attention on a club night.</p>
-<p>Scoreboards are left open for weeks, so the web app updates itself. When a new build ships, a scoreboard waits until there's no game in progress, then for two minutes of nobody touching it, then shows a fifteen second countdown and reloads. Any touch restarts the wait. It will never reload in the middle of an end.</p>
-<p>Roles are tight. A paired scoreboard can read its own sheet and its club's settings, and write its own games — nothing else, and it loses that access the moment it's disconnected or replaced. A display screen can read the scores it displays and nothing more. The club's API key and webhook URL live where scoreboards and display screens can't reach them.</p>
-<p>And there are two environments, with every change going through automated checks — including tests that run the real security rules against a Firebase emulator — before it reaches either one.</p>
+<p>Scoreboards are left open for weeks, so the web app updates itself. When a new build ships, a scoreboard waits until there's no game in progress, then for two minutes of nobody touching it, and then finally shows a fifteen second countdown and reloads. Any touch restarts the wait. It will never reload in the middle of a draw.</p>
 <h2>Interested in this for your club?</h2>
-<p>If you run a curling club and any of the above sounds like something you'd use — scoreboards on every sheet, your leagues and your rosters in it, a warm room TV, a score bug on your stream, results posting themselves to your Discord — get in touch and we'll talk about getting your club set up.</p>
-<p><a href="mailto:contact@cloudgatestudios.com">Email contact@cloudgatestudios.com</a>, or just open <a href="https://curlingscoreboard.app">curlingscoreboard.app</a> and keep score on something. That part still works without talking to anybody.</p>
+<p>If you run a curling club and any of the above sounds like something you'd use get in touch and we'll talk about getting your club set up. Just send a <a href="mailto:contact@cloudgatestudios.com">Email to contact@cloudgatestudios.com</a></p>
 
     </div>
   </div>
