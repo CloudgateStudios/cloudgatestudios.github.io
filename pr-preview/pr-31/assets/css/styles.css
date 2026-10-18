@@ -713,7 +713,25 @@ ul {
 
 .post-body img {
   border-radius: var(--radius-md);
+  /* A light UI capture on a white page needs an edge; the radius alone does
+     not close it. */
+  border: 1px solid var(--color-border);
   margin-bottom: var(--space-6);
+}
+
+.post-body figure {
+  margin: 0 0 var(--space-8);
+}
+
+.post-body figure img {
+  margin-bottom: 0;
+}
+
+.post-body figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 @media (max-width: 639px) {
@@ -1025,6 +1043,15 @@ ul {
   grid-template-columns: 1fr;
   max-width: 760px;
   margin-inline: auto;
+}
+
+/* Screenshots supporting a section, stacked and held narrower than the
+   container so a wide UI capture stays readable rather than filling the page. */
+.section-shots {
+  display: grid;
+  gap: var(--space-12);
+  max-width: 900px;
+  margin: var(--space-16) auto 0;
 }
 
 /* Feature grid: what a product offers beyond its headline, broken into
