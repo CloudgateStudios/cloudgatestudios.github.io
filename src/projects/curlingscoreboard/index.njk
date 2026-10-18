@@ -34,7 +34,7 @@ permalink: /CurlingScoreboard/
         <div class="app-detail-description-text">
           <h2>Open it and keep score</h2>
           <p>Curling Scoreboard runs in any browser. Open it on whatever device is sitting by the sheet, tap in the score as the ends go by, and that is the whole thing. No install, no account, nothing to set up.</p>
-          <p>That has always been free and it stays that way. Everything below is what a club can add on top of it — and none of it is required to keep score.</p>
+          <p>Keeping score is free and accessible to anyone. If you're a curling club looking for a bit more management of your scores, check out our paid features below.</p>
           <a href="https://curlingscoreboard.app" class="store-btn" target="_blank" rel="noopener noreferrer">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
             Visit curlingscoreboard.app
@@ -48,7 +48,7 @@ permalink: /CurlingScoreboard/
             height="573"
             loading="lazy"
           >
-          <figcaption>A game at the seventh end. Every end is kept below the totals, the way a club scoreboard reads.</figcaption>
+          <figcaption>A game at the seventh end with a baseball style scoreboard.</figcaption>
         </figure>
       </div>
     </div>
@@ -59,13 +59,13 @@ permalink: /CurlingScoreboard/
     <div class="container">
       <div class="section-header section-header--center">
         <h2 class="section-heading">Run it across your whole club</h2>
-        <p class="section-subheading">A scoreboard paired to every sheet, your leagues and rosters in it, your bonspiels planned in it, and the scores on screens around the building.</p>
+        <p class="section-subheading">A scoreboard paired to every sheet, your leagues and bonspiels planned in it, and the scores on screens around the building.</p>
       </div>
 
       <div class="feature-grid">
         <div class="feature-card">
           <h3 class="feature-card-title">A scoreboard on every sheet</h3>
-          <p>Pair each sheet's scoreboard once with a six character code. The club portal then shows every sheet at a glance — what is live, which scoreboards are online, and which need an update. Scoring still works if the internet does not, and syncs when it comes back.</p>
+          <p>Pair each sheet's scoreboard once with a six character code. The club portal then shows every sheet at a glance. See what is live, which scoreboards are online, and which need an update. Scoring still works if the internet does not, and syncs when it comes back.</p>
         </div>
 
         <div class="feature-card">
@@ -80,31 +80,46 @@ permalink: /CurlingScoreboard/
 
         <div class="feature-card">
           <h3 class="feature-card-title">A warm room screen</h3>
-          <p>Every sheet on one TV, sized to fill whatever screen you put it on, with the end, the league and both teams on their rock colors. Add your club's name and logo to the title bar. Leave it running for the season.</p>
+          <p>Every sheet on one TV, sized to fill whatever screen you put it on, to see the overview of all the action. Add your club's name and logo to the title bar. Leave it running for the season.</p>
         </div>
 
         <div class="feature-card">
           <h3 class="feature-card-title">A score bug for your stream</h3>
-          <p>A transparent overlay you drop into OBS as a browser source. It shows the teams, scores, hammer and end, scales to fit your layout, and hides itself between games. A preview mode makes it easy to place while the ice is empty.</p>
+          <p>A transparent overlay you drop into your streaming setup as a browser source. It shows the teams, scores, hammer and end, scales to fit your layout, and hides itself between games.</p>
         </div>
 
         <div class="feature-card">
           <h3 class="feature-card-title">Scores on your website</h3>
-          <p>A read-only API serves live and finished games, leagues and bonspiels to your club's site, with documentation and a test page. Or have every finished game post itself to a Slack or Discord channel, in a message you write.</p>
+          <p>A read-only API serves live and finished games, leagues and bonspiels to your club's site. Or have every finished game post itself to a Slack or Discord channel, in a message you write.</p>
         </div>
       </div>
 
-      {#
-        Screenshots pending for this section. The blog post at
-        /blog/2026-10-17-curling-scoreboard-platform/ lists the full set of
-        proposals; these three are the ones that carry this page. Drop the
-        captures in src/assets/img/ and uncomment.
+      <div class="section-shots">
+        <figure class="app-detail-screenshot app-detail-screenshot--wide">
+          <img src="{{ "/assets/img/CurlingScoreboardAdminSheetsScreenshot.webp" | url }}" alt="The club portal, showing six sheets with live games in progress, each scoreboard's version and last-seen time, and the last seven days of completed games beside them" width="1440" height="900" loading="lazy">
+          <figcaption>Every sheet at once: what is live, which scoreboards are online, and what draws have been played this week.</figcaption>
+        </figure>
 
-        <div class="app-detail-screenshot app-detail-screenshot--pair">
-          <img src="{{ "/assets/img/CurlingScoreboardWarmRoomScreenshot.jpg" | url }}" alt="The warm room screen on a club TV, showing a card for every sheet with the current end, the league, and both teams on their rock colors" width="1920" height="1080" loading="lazy">
-          <img src="{{ "/assets/img/CurlingScoreboardBonspielBoardScreenshot.png" | url }}" alt="The bonspiel draw board in the club portal, with draws down the side and sheets across, and later games showing where their teams come from" width="1920" height="1080" loading="lazy">
-        </div>
-      #}
+        <figure class="app-detail-screenshot app-detail-screenshot--wide">
+          <img src="{{ "/assets/img/CurlingScoreboardWarmRoomEndsScreenshot.webp" | url }}" alt="The warm room screen on a dark background, showing all six sheets with each game broken out end by end alongside the totals" width="1440" height="810" loading="lazy">
+          <figcaption>The warm room screen, here showing every game end by end. It sizes itself to whatever TV you put it on.</figcaption>
+        </figure>
+
+        <figure class="app-detail-screenshot app-detail-screenshot--wide">
+          <img src="{{ "/assets/img/CurlingScoreboardScoreBugFrameScreenshot.webp" | url }}" alt="The score bug sitting in the corner of a stream frame, showing both teams on their rock colors with the score, the league and the current end" width="1440" height="810" loading="lazy">
+          <figcaption>The score bug in a stream frame. The page is transparent, so only the bug appears over your video.</figcaption>
+        </figure>
+
+        <figure class="app-detail-screenshot app-detail-screenshot--wide">
+          <img src="{{ "/assets/img/CurlingScoreboardBonspielBoardScreenshot.webp" | url }}" alt="The bonspiel draw board, with ten draws down the side and six sheets across, where games still to be played name the earlier game their teams come from" width="1440" height="1420" loading="lazy">
+          <figcaption>A three-day spiel on one board. Games not yet played say where their teams are coming from.</figcaption>
+        </figure>
+
+        <figure class="app-detail-screenshot app-detail-screenshot--wide">
+          <img src="{{ "/assets/img/CurlingScoreboardDisplaysScreenshot.webp" | url }}" alt="The portal's Displays tab, listing a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV, each with what it shows and when it was last used" width="1440" height="900" loading="lazy">
+          <figcaption>One link per screen, and what each shows is a setting here — so a TV is re-pointed without having to update it.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -112,7 +127,7 @@ permalink: /CurlingScoreboard/
   <section class="section">
     <div class="container">
       <div class="about-content">
-        <p>For the long version — how pairing works, what the bonspiel templates do, how the displays are set up, and what goes out over the API and webhooks — see <a href="{{ "/blog/2026-10-17-curling-scoreboard-platform/" | url }}">the full write-up on the blog</a>.</p>
+        <p>For the long version including how pairing works, what the bonspiel templates do, how the displays are set up, and what goes out over the API and webhooks — see <a href="{{ "/blog/2026-10-17-curling-scoreboard-platform/" | url }}">the full write-up on the blog</a>.</p>
       </div>
     </div>
   </section>

@@ -98,6 +98,11 @@ body {
 img {
   max-width: 100%;
   display: block;
+  /* Images carry width and height attributes so the browser can reserve their
+     space before they load. Without this, that height is also the used height,
+     so an image held to a narrower column keeps its full height and stretches.
+     height: auto lets the height follow the width instead. */
+  height: auto;
 }
 
 a {
@@ -622,7 +627,9 @@ ul {
 }
 
 .post-body .container {
-  max-width: 720px;
+  /* Prose has a readable ceiling of roughly 75 to 90 characters a line, so the
+     text column is held well short of the window. Figures break out of it. */
+  //max-width: 880px;
 }
 
 /* Markdown prose styles */
@@ -713,7 +720,43 @@ ul {
 
 .post-body img {
   border-radius: var(--radius-md);
+  /* A light UI capture on a white page needs an edge; the radius alone does
+     not close it. */
+  border: 1px solid var(--color-border);
   margin-bottom: var(--space-6);
+}
+
+/* A transparent capture, such as the stream score bug, has no edge to close.
+   A border would box in the empty space around it instead of the image. */
+.post-body img.is-transparent,
+.app-detail-screenshot img.is-transparent {
+  border: none;
+}
+
+/* A screenshot wants width; prose does not. Figures break out of the text
+   column to use the room the window actually has, and fall back to the column
+   width once the window is narrower than that. */
+.post-body figure {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max(100%, min(80vw, 1500px));
+  margin: 0 0 var(--space-8);
+}
+
+.post-body figure img {
+  margin-bottom: 0;
+  /* An image narrower than the broken-out figure sits in the middle of it
+     rather than against the left edge. Capped at its natural width, so a
+     smaller capture is never stretched. */
+  margin-inline: auto;
+}
+
+.post-body figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 @media (max-width: 639px) {
@@ -1025,6 +1068,15 @@ ul {
   grid-template-columns: 1fr;
   max-width: 760px;
   margin-inline: auto;
+}
+
+/* Screenshots supporting a section, stacked and held narrower than the
+   container so a wide UI capture stays readable rather than filling the page. */
+.section-shots {
+  display: grid;
+  gap: var(--space-12);
+  max-width: 900px;
+  margin: var(--space-16) auto 0;
 }
 
 /* Feature grid: what a product offers beyond its headline, broken into
