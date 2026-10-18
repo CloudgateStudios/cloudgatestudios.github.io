@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curling Scoreboard is now a system for clubs — Cloudgate Studios</title>
+  <meta name="description" content="What started as a single page for keeping score has grown into a managed platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+</head>
+<body>
+  <nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo" aria-label="Cloudgate Studios">
+      <img src="/assets/img/logo.svg" alt="Cloudgate Studios" width="160" height="36">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <main>
+    <article class="post-layout">
+  <header class="post-header">
+    <div class="container">
+      <div class="post-meta">
+        <a href="/blog/" class="back-link">← All Posts</a>
+        <time datetime="2026-10-17">October 17, 2026</time>
+      </div>
+      <h1 class="post-title">Curling Scoreboard is now a system for clubs</h1>
+      
+      <p class="post-description">What started as a single page for keeping score has grown into a managed platform.</p>
+      
+    </div>
+  </header>
+  <div class="post-body">
+    <div class="container">
+      <p><a href="https://curlingscoreboard.app">Curling Scoreboard</a> started as one page. You opened it on whatever device was sitting by the sheet, tapped in the score as the ends went by, and that was the whole product. No accounts, no install, nothing to manage.</p>
+<p>That version still exists, and it still works exactly that way. But over the past few months it has grown into a managed system a club can run across every sheet in the building, with leagues, bonspiels, displays in the warm room and on a stream, and a way to get the scores back out into the club's own website. We have developed this with <a href="https://windycitycurling">Windy City Curling in Villa Park, IL</a> where its up and running today.</p>
+<p>This post is a tour of what's there now.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardGameScreenshot.png" alt="A Curling Scoreboard game in progress, with red leading yellow 6 to 4 in the seventh end, each end's score laid out beneath the totals, and markers showing which team has the hammer." width="800" height="573">
+  <figcaption>The tweaked scoreboard.</figcaption>
+</figure>
+<h2>The scoreboard still works alone</h2>
+<p>Worth saying up front, because it shapes everything else: nothing about scoring depends on the backend.</p>
+<p>An unpaired scoreboard is the original app. Open the page, start a game, keep score. If a club pairs its scoreboards and the internet goes down mid-draw, scoring carries on as if nothing happened, and the scores sync when the connection comes back. Writes are fire-and-forget by design, so a failed sync can never interrupt a game in progress.</p>
+<p>Pairing adds syncing. It doesn't add a dependency.</p>
+<h2>Scoreboards that belong to a club</h2>
+<p>A club has sheets, and each sheet has a scoreboard paired to it. An admin generates a six character code for a sheet in the portal, someone types it into the scoreboard once, and from then on that device is that sheet.</p>
+<p>Once paired, the scoreboard reports on itself every half hour to ensure the basics of the system are working. The portal shows each sheet's scoreboard as online or offline, flags one running an old build as &quot;Update pending&quot;, and surfaces the last failed sync, which is otherwise invisible because scoring never blocks on the network.</p>
+<p>Disconnecting is deliberately hard to do by accident, because scoreboards sit in public where anyone can tap at them. The setup screen just says &quot;Connected as club – sheet&quot;. Press and hold that for four seconds, with a ring filling in as you go, and you get a dialog with a Disconnect button that asks for the club's admin PIN before it will let go of the sheet. If something is broken on the tablet you also have the ability to disconnect a tablet from the admin panel.</p>
+<p>Clubs that play with colors other than red and yellow pick theirs in the portal, and the paired scoreboards update. The colors are read when a game starts, so a change never lands in the middle of one, and each scoreboard remembers the last colors it saw so it still comes up right if it boots before the network does.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardAdminSheetsScreenshot.webp" alt="The admin portal's Sheets and Games tab, showing six sheets with live games in progress, each scoreboard's version and last-seen time, and the last seven days of completed games beside them." width="1440" height="900" loading="lazy">
+  <figcaption>Every sheet at once: what is live, which scoreboards are online, and what has been played this week.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/img/CurlingScoreboardRockColorsScreenshot.webp" alt="The portal's scoreboard settings, with swatches for the first and second rock colors and a preview of how a score looks on the club's scoreboards." width="1440" height="900" loading="lazy">
+  <figcaption>Clubs that do not play red and yellow pick their colors here, with a preview of the result.</figcaption>
+</figure>
+<h2>Leagues, and teams that are actually named</h2>
+<p>The biggest change for a regular club night: a game can know which league it belongs to and which teams are playing.</p>
+<p>A club admin sets up each league with its weekly draw times and its teams, either by hand or by importing a CSV with the data. The import is parsed in the browser and shows you exactly what would be added, renamed and removed before it writes anything. Teams keep a stable ID across renames and re-imports, so re-importing your roster next season doesn't orphan the games already recorded against a team.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardLeaguesScreenshot.webp" alt="The portal's Leagues tab, with the club's seven leagues laid out on a weekly calendar from Sunday to Saturday and listed below with their team counts and draw times." width="1440" height="1683" loading="lazy">
+  <figcaption>The club's week. Draw times are what a scoreboard checks its own clock against to offer the right league.</figcaption>
+</figure>
+<p>On the scoreboard, this shows up as one bar above the normal setup screen. Leave it alone and you get an open game, exactly as before. The bar follows the scoreboard's own clock: if a league is in its draw window, which is configurable in the admin panel, it names that league and marks it as playing now. Tapping through opens a full screen team picker, every team one large button on a fixed grid, sized for mitts and for being read from a few feet away.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardGameSetupScreenshot.webp" alt="The scoreboard's game setup screen, with a bar across the top reading Playing now, Sunday Brunch, and the two picked teams on their rock colors, above the number of ends, players per team and first end hammer." width="1440" height="900" loading="lazy">
+  <figcaption>The bar above the usual settings. It names the league playing now off the scoreboard's own clock.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/img/CurlingScoreboardTeamPickerScreenshot.webp" alt="The full screen team picker, with the picked teams in red and yellow slots at the top and the league's remaining teams as large buttons below." width="1440" height="900" loading="lazy">
+  <figcaption>The picker is only teams. The first tapped throws the first rock color, and the arrows swap them.</figcaption>
+</figure>
+<p>Once teams are picked, both names sit under the total scores on their rock colors, so the players can check that whoever set it up got it right. And if it's wrong the Teams button re-picks them at any point until the game is finished.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardLeagueGameScreenshot.webp" alt="A league game on the scoreboard, with red leading yellow 5 to 4 in the seventh end, both team names under the totals on their rock colors, and a Teams button in the top bar." width="1440" height="900" loading="lazy">
+  <figcaption>The same board, now naming the teams. The Teams button re-picks them mid-game.</figcaption>
+</figure>
+<p>The league and each team's ID ride along with the game, including the external ID from the club's own league software if the import supplied one. That's what makes the scores useful to anything downstream.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardLeagueTeamsScreenshot.webp" alt="A league's page in the portal, showing its season dates, its two Monday draws, and its twelve teams each with a name and an external ID from the club's own league software." width="1440" height="900" loading="lazy">
+  <figcaption>One league: its season, its draws, and its roster. The second column is each team's ID in the club's own league software.</figcaption>
+</figure>
+<h2>Bonspiels</h2>
+<p>Bonspiels were the hard part, and the most recent.</p>
+<p>The format changes from one bonspiel to the next, so the system doesn't store formats. A bonspiel is a list of games, and each side of each game says where its team comes from: a team the coordinator placed, the winner or loser of a game in an earlier draw, a finishing place out of a pool, or not decided yet. An A/B/C knockout, a round robin into a playoff, and games placed entirely by hand are all just different ways of writing that down.</p>
+<p>Coordinators plan it on a draw board. Tap a game to set its teams or its result, tap an empty cell to add one. Beside that, a bracket view lays out each event in rounds and names the winner once there is one. Pools show standings instead, ranked on points, then on the games between the tied teams, and then by an order the coordinator sets after a last stone draw or a tiebreak game.</p>
+<p>You don't have to build a bracket from scratch. A knockout template fills in a whole bonspiel for up to 64 teams across as many as four events, with losers dropping down the way most club spiels run it, with byes handled so no team gets two. A pools template splits teams into round robins and feeds the top finishers into a playoff. What either one produces is an ordinary plan you can then edit by hand. And Duplicate copies a bonspiel's events, draws and games onto new dates to run the whole thing again next year.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardBonspielSetupScreenshot.webp" alt="A bonspiel's setup page, with its dates and default number of ends, its four events each with their own end count, and its twenty-four teams listed down the right." width="1440" height="900" loading="lazy">
+  <figcaption>The spiel itself: dates, events and teams. Duplicate copies all of it onto next year's dates.</figcaption>
+</figure>
+<p>But planning is only the first part. During the bonspiel, each sheet's scoreboard offers that sheet's game in the current draw. A side that isn't known yet shows where it's coming from — &quot;Winner of A3&quot;, &quot;Pool A #1&quot; — and fills in on its own as results land. The scoreboard also records who actually played, which wins over the plan, so a last minute team swap still sends the right team on to the next game.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardBonspielBoardScreenshot.webp" alt="The bonspiel draw board, with ten draws down the side and six sheets across. Early games name their teams and scores; later ones read Winner of A1 or Loser of A3 until the result that fills them in arrives." width="1440" height="1420" loading="lazy">
+  <figcaption>A three-day spiel on one board. Games that have not been played yet say where their teams are coming from.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/img/CurlingScoreboardBracketsScreenshot.webp" alt="The bracket view, showing the A, B, C and D events each laid out in rounds, with completed games carrying their scores and the finals still waiting on the winners of earlier games." width="1440" height="2640" loading="lazy">
+  <figcaption>The same spiel as brackets. Nothing marks a final: it is the one game in an event whose winner goes nowhere else.</figcaption>
+</figure>
+<p>Because a bonspiel weekend is its own job, there's a bonspiel admin role that can plan spiels and read game history and change nothing else. Hand it to the spiel coordinator and nothing else about the club is exposed.</p>
+<h2>Screens around the club</h2>
+<p>Scores are more useful on a wall than in a browser tab, so there are three screens a club can put up, and all of them read from the live games as they're entered.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardDisplaysScreenshot.webp" alt="The portal's Displays tab, listing four links — a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV — each with what it shows and when it was last used, beside the warm room screen's title and logo." width="1440" height="900" loading="lazy">
+  <figcaption>One link per screen. What each one shows is a setting here, so a TV can be re-pointed without touching the TV.</figcaption>
+</figure>
+<p>The <strong>warm room screen</strong> shows every sheet at once on a TV. It figures out the best column layout for however many sheets you have and sizes everything from there, so it fills a 1080p screen, a 4K screen, or one turned on its side, without scrolling. Each card has the sheet, the current end or Final, the league, and both teams on their rock colors with the hammer. An idle sheet dims and says &quot;No game&quot;. A club can put its own title and logo in the title bar for a bit of customization.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardWarmRoomScreenshot.webp" alt="The warm room screen on a dark background, showing all six sheets as cards with the league, the current end or Final, and both teams on their rock colors with the hammer marked." width="1440" height="810" loading="lazy">
+  <figcaption>Six sheets on one screen, with the club's own name in the bar and a clock to show it is still running.</figcaption>
+</figure>
+<p>The <strong>score bug</strong> is for streams. It's a transparent page you drop into your streaming software as a browser source, showing the two teams, their colors, the scores, the hammer, and the end. And it hides itself entirely when the sheet is idle. There's a preview mode for setting it up, which shows a faded stand-in at the bug's real size when no game is on, so you can place it in OBS between draws instead of guessing.</p>
+<figure>
+  <img class="is-transparent" src="/assets/img/CurlingScoreboardScoreBugScreenshot.webp" alt="The stream score bug: the red team on 5 with the hammer above the yellow team on 4, each named on its rock color, with the league and End 7 along the bottom." width="1440" height="525" loading="lazy">
+  <figcaption>The bug itself. Everything around it is transparent, so a browser source shows only this.</figcaption>
+</figure>
+<p>The <strong>bonspiel screen</strong> is for a spiel weekend. This will cycle through the draw that's on right now as large cards with live scores, the next draw as a list, a full schedule grid, and the brackets.</p>
+<p>Each screen gets its own link from the portal, and the link's URL never has to change. What the screen shows is a setting on the link, so you can point a TV at a different sheet or switch a stream from the score bug to the warm room from the portal and the screen follows within seconds. The screens are built to be left running for weeks. Everything retries, and a screen that loses its connection keeps showing the last scores it had rather than going blank until it reconnects.</p>
+<h2>Getting the scores out</h2>
+<p>Based on your needs we have two options.</p>
+<p>A <strong>read-only REST API</strong> covers the club, its sheets, live and completed games, its leagues and its bonspiels. Every request needs the club's API key. It's documented at <a href="https://curlingscoreboard.app/api-docs/"><code>/api-docs/</code></a>, and there's a test page in the portal for trying calls without writing any code.</p>
+<p>A <strong>webhook</strong> covers a simpler case: every finished game posted to a URL, which in practice means a Slack or Discord channel. Clubs can post every game, only league games, or only bonspiel games, and write their own message with variables. Discord posts are sent with notifications suppressed, so results land in the channel without buzzing everyone's phone.</p>
+<p>The nice property of both: they're driven by what someone already does, which is tap in the score. Nobody has to re-enter results anywhere.</p>
+<figure>
+  <img src="/assets/img/CurlingScoreboardIntegrationsScreenshot.webp" alt="The portal's Integrations settings: an API key with a link to the API documentation, and below it the completed game webhook with its destination URL masked, what it posts, and when the last game was delivered." width="1440" height="900" loading="lazy">
+  <figcaption>Both routes out, in one place. The webhook records its last delivery, so a quiet channel and a broken URL look different.</figcaption>
+</figure>
+<h2>Keeping it running</h2>
+<p>A few things that aren't features so much as the reason none of this needs attention on a club night.</p>
+<p>Scoreboards are left open for weeks, so the web app updates itself. When a new build ships, a scoreboard waits until there's no game in progress, then for two minutes of nobody touching it, and then finally shows a fifteen second countdown and reloads. Any touch restarts the wait. It will never reload in the middle of a draw.</p>
+<h2>Interested in this for your club?</h2>
+<p>If you run a curling club and any of the above sounds like something you'd use get in touch and we'll talk about getting your club set up. Just send a <a href="mailto:contact@cloudgatestudios.com">Email to contact@cloudgatestudios.com</a></p>
+
+    </div>
+  </div>
+</article>
+
+  </main>
+  <footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; Cloudgate Studios. Chicago, IL.</p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/#projects">Projects</a>
+      <a href="/#about">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
