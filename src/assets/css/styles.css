@@ -627,7 +627,9 @@ ul {
 }
 
 .post-body .container {
-  max-width: 720px;
+  /* Prose has a readable ceiling of roughly 75 to 90 characters a line, so the
+     text column is held well short of the window. Figures break out of it. */
+  //max-width: 880px;
 }
 
 /* Markdown prose styles */
@@ -731,12 +733,23 @@ ul {
   border: none;
 }
 
+/* A screenshot wants width; prose does not. Figures break out of the text
+   column to use the room the window actually has, and fall back to the column
+   width once the window is narrower than that. */
 .post-body figure {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max(100%, min(80vw, 1500px));
   margin: 0 0 var(--space-8);
 }
 
 .post-body figure img {
   margin-bottom: 0;
+  /* An image narrower than the broken-out figure sits in the middle of it
+     rather than against the left edge. Capped at its natural width, so a
+     smaller capture is never stretched. */
+  margin-inline: auto;
 }
 
 .post-body figcaption {
