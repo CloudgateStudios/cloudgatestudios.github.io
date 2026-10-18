@@ -11,7 +11,7 @@ That version still exists, and it still works exactly that way. But over the pas
 This post is a tour of what's there now.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardGameScreenshot.png" alt="A Curling Scoreboard game in progress, with red leading yellow 6 to 4 in the seventh end, each end's score laid out beneath the totals, and markers showing which team has the hammer." width="800" height="573">
+  <img src="{{ "/assets/img/CurlingScoreboardGameScreenshot.png" | url }}" alt="A Curling Scoreboard game in progress, with red leading yellow 6 to 4 in the seventh end, each end's score laid out beneath the totals, and markers showing which team has the hammer." width="800" height="573">
   <figcaption>The tweaked scoreboard.</figcaption>
 </figure>
 
@@ -34,12 +34,12 @@ Disconnecting is deliberately hard to do by accident, because scoreboards sit in
 Clubs that play with colors other than red and yellow pick theirs in the portal, and the paired scoreboards update. The colors are read when a game starts, so a change never lands in the middle of one, and each scoreboard remembers the last colors it saw so it still comes up right if it boots before the network does.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardAdminSheetsScreenshot.webp" alt="The admin portal's Sheets and Games tab, showing six sheets with live games in progress, each scoreboard's version and last-seen time, and the last seven days of completed games beside them." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardAdminSheetsScreenshot.webp" | url }}" alt="The admin portal's Sheets and Games tab, showing six sheets with live games in progress, each scoreboard's version and last-seen time, and the last seven days of completed games beside them." width="1440" height="900" loading="lazy">
   <figcaption>Every sheet at once: what is live, which scoreboards are online, and what has been played this week.</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardRockColorsScreenshot.webp" alt="The portal's scoreboard settings, with swatches for the first and second rock colors and a preview of how a score looks on the club's scoreboards." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardRockColorsScreenshot.webp" | url }}" alt="The portal's scoreboard settings, with swatches for the first and second rock colors and a preview of how a score looks on the club's scoreboards." width="1440" height="900" loading="lazy">
   <figcaption>Clubs that do not play red and yellow pick their colors here, with a preview of the result.</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ The biggest change for a regular club night: a game can know which league it bel
 A club admin sets up each league with its weekly draw times and its teams, either by hand or by importing a CSV with the data. The import is parsed in the browser and shows you exactly what would be added, renamed and removed before it writes anything. Teams keep a stable ID across renames and re-imports, so re-importing your roster next season doesn't orphan the games already recorded against a team.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardLeaguesScreenshot.webp" alt="The portal's Leagues tab, with the club's seven leagues laid out on a weekly calendar from Sunday to Saturday and listed below with their team counts and draw times." width="1440" height="1683" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardLeaguesScreenshot.webp" | url }}" alt="The portal's Leagues tab, with the club's seven leagues laid out on a weekly calendar from Sunday to Saturday and listed below with their team counts and draw times." width="1440" height="1683" loading="lazy">
   <figcaption>The club's week. Draw times are what a scoreboard checks its own clock against to offer the right league.</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ Once teams are picked, both names sit under the total scores on their rock color
 The league and each team's ID ride along with the game, including the external ID from the club's own league software if the import supplied one. That's what makes the scores useful to anything downstream.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardLeagueTeamsScreenshot.webp" alt="A league's page in the portal, showing its season dates, its two Monday draws, and its twelve teams each with a name and an external ID from the club's own league software." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardLeagueTeamsScreenshot.webp" | url }}" alt="A league's page in the portal, showing its season dates, its two Monday draws, and its twelve teams each with a name and an external ID from the club's own league software." width="1440" height="900" loading="lazy">
   <figcaption>One league: its season, its draws, and its roster. The second column is each team's ID in the club's own league software.</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ Coordinators plan it on a draw board — draws down the side, sheets across. Tap
 You don't have to build a bracket from scratch. A knockout template fills in a whole bonspiel — up to 64 teams across as many as four events, with losers dropping down the way most club spiels run it, byes handled so no team gets two. A pools template splits teams into round robins and feeds the top finishers into a playoff. What either one produces is an ordinary plan you can then edit by hand. And Duplicate copies a bonspiel's events, draws and games onto new dates to run the whole thing again next year.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardBonspielSetupScreenshot.webp" alt="A bonspiel's setup page, with its dates and default number of ends, its four events each with their own end count, and its twenty-four teams listed down the right." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardBonspielSetupScreenshot.webp" | url }}" alt="A bonspiel's setup page, with its dates and default number of ends, its four events each with their own end count, and its twenty-four teams listed down the right." width="1440" height="900" loading="lazy">
   <figcaption>The spiel itself: dates, events and teams. Duplicate copies all of it onto next year's dates.</figcaption>
 </figure>
 
@@ -85,12 +85,12 @@ The part that makes it work on the ice: during the bonspiel, each sheet's scoreb
 Because a bonspiel weekend is its own job, there's a bonspiel admin role that can plan spiels and read game history and change nothing else. Hand it to the spiel coordinator and nothing else about the club is exposed.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardBonspielBoardScreenshot.webp" alt="The bonspiel draw board, with ten draws down the side and six sheets across. Early games name their teams and scores; later ones read Winner of A1 or Loser of A3 until the result that fills them in arrives." width="1440" height="1420" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardBonspielBoardScreenshot.webp" | url }}" alt="The bonspiel draw board, with ten draws down the side and six sheets across. Early games name their teams and scores; later ones read Winner of A1 or Loser of A3 until the result that fills them in arrives." width="1440" height="1420" loading="lazy">
   <figcaption>A three-day spiel on one board. Games that have not been played yet say where their teams are coming from.</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardBracketsScreenshot.webp" alt="The bracket view, showing the A, B, C and D events each laid out in rounds, with completed games carrying their scores and the finals still waiting on the winners of earlier games." width="1440" height="2640" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardBracketsScreenshot.webp" | url }}" alt="The bracket view, showing the A, B, C and D events each laid out in rounds, with completed games carrying their scores and the finals still waiting on the winners of earlier games." width="1440" height="2640" loading="lazy">
   <figcaption>The same spiel as brackets. Nothing marks a final: it is the one game in an event whose winner goes nowhere else.</figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ Suggested file: CurlingScoreboardScoreBugScreenshot.png
 -->
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardDisplaysScreenshot.webp" alt="The portal's Displays tab, listing four links — a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV — each with what it shows and when it was last used, beside the warm room screen's title and logo." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardDisplaysScreenshot.webp" | url }}" alt="The portal's Displays tab, listing four links — a livestream score bug, a bonspiel lobby screen, a lounge bar TV and a warm room TV — each with what it shows and when it was last used, beside the warm room screen's title and logo." width="1440" height="900" loading="lazy">
   <figcaption>One link per screen. What each one shows is a setting here, so a TV can be re-pointed without touching the TV.</figcaption>
 </figure>
 
@@ -141,12 +141,12 @@ A **webhook** covers the other case: every finished game posted to a URL, which 
 The nice property of both: they're driven by what someone already does, which is tap in the score. Nobody has to re-enter results anywhere.
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardIntegrationsScreenshot.webp" alt="The portal's Integrations settings: an API key with a link to the API documentation, and below it the completed game webhook with its destination URL masked, what it posts, and when the last game was delivered." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardIntegrationsScreenshot.webp" | url }}" alt="The portal's Integrations settings: an API key with a link to the API documentation, and below it the completed game webhook with its destination URL masked, what it posts, and when the last game was delivered." width="1440" height="900" loading="lazy">
   <figcaption>Both routes out, in one place. The webhook records its last delivery, so a quiet channel and a broken URL look different.</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/img/CurlingScoreboardGameHistoryScreenshot.webp" alt="A sheet's game history with one game expanded to its end-by-end line score, and a note underneath reading Webhook delivered 200." width="1440" height="900" loading="lazy">
+  <img src="{{ "/assets/img/CurlingScoreboardGameHistoryScreenshot.webp" | url }}" alt="A sheet's game history with one game expanded to its end-by-end line score, and a note underneath reading Webhook delivered 200." width="1440" height="900" loading="lazy">
   <figcaption>Each completed game keeps its ends, and what happened when it was posted.</figcaption>
 </figure>
 
