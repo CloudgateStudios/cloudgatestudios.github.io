@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: Clear Paths
+description: "Endless Minesweeper for iPhone and iPad, with no guessing. Every world can be solved with logic."
+permalink: /ClearPaths/
+appStoreUrl: ""
+---
+
+<div class="app-detail">
+
+  <!-- Hero -->
+  <div class="app-detail-hero">
+    <div class="container">
+      <a href="{{ "/" | url }}" class="app-detail-back">← Cloudgate Studios</a>
+      <div class="app-detail-hero-content">
+        <div class="app-detail-icon-wrap">
+          <img src="{{ "/assets/img/ClearPathsIcon.svg" | url }}" alt="Clear Paths icon" width="120" height="120">
+        </div>
+        <div class="app-detail-hero-text">
+          <h1 class="app-detail-title">Clear Paths</h1>
+          <p class="app-detail-tagline">Endless Minesweeper. No guessing.</p>
+          {% if appStoreUrl %}
+          <a href="{{ appStoreUrl }}" class="store-btn store-btn--large" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on the App Store
+          </a>
+          {% else %}
+          <p class="app-detail-pending">Coming soon to the App Store</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="app-detail-description">
+    <div class="container">
+      <div class="app-detail-description-inner">
+        <div class="app-detail-screenshot app-detail-screenshot--pair">
+          <img src="{{ "/assets/img/ClearPathsBoardScreenshot.webp" | url }}" alt="A Clear Paths board in the Moonpath world, with numbered green tiles, hidden tiles and orange flags" width="560" height="1154" loading="lazy">
+          <img src="{{ "/assets/img/ClearPathsWorldsScreenshot.webp" | url }}" alt="The Clear Paths home screen, showing the Larkpath world's map and statistics, with a Play button" width="560" height="1154" loading="lazy">
+        </div>
+        <div class="app-detail-description-text">
+          <h2>Small clues, and plenty of room to roam</h2>
+          <p>Clear Paths is Minesweeper with no edge to the board and no coin flips. A world goes on as far as you care to wander, and each zone is checked before you play it, so the next safe move can always be worked out from the clues.</p>
+          <p>Hit a mine and you lose the zone, not the world. It locks, you carry on next door, and it reopens when a zone beside it clears. Come back whenever you like and the board is where you left it.</p>
+          <p>Each world has one of four difficulties. Pick from five themes or mix your own colors. New to the game? Guided practice walks you through revealing tiles, reading clues and planting flags.</p>
+          <p>There is no account to make. Your worlds stay on your device and sync through your own private iCloud. There are no ads, no analytics, no tracking and no purchases inside the app.</p>
+          {% if appStoreUrl %}
+          <a href="{{ appStoreUrl }}" class="store-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          {% endif %}
+          <p class="app-detail-privacy-link"><a href="{{ "/ClearPaths/privacy-policy/" | url }}">Privacy Policy</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

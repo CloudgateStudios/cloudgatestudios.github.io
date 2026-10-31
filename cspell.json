@@ -37,7 +37,9 @@
     "gstatic",
     "inter",
     "itunes",
+    "larkpath",
     "mailto",
+    "moonpath",
     "njk",
     "noopener",
     "noreferrer",
@@ -47,6 +49,7 @@
     "racereplay",
     "scorekeeping",
     "strava",
+    "tabindex",
     "tailwind",
     "webfonts"
   ],

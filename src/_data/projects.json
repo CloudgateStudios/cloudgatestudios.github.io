@@ -1,5 +1,16 @@
 [
   {
+    "name": "Clear Paths",
+    "slug": "clearpaths",
+    "tagline": "Endless Minesweeper. No guessing.",
+    "description": "A quiet, no-guess Minesweeper for iPhone and iPad. Every world goes on as far as you care to wander, and the next safe move can always be worked out from the clues.",
+    "icon": "/assets/img/ClearPathsIcon.svg",
+    "url": "/ClearPaths/",
+    "platform": ["ios"],
+    "status": "upcoming",
+    "featured": true
+  },
+  {
     "name": "Meal Plan",
     "slug": "mealplan",
     "tagline": "Weekly menus and grocery lists, shared with your household",
