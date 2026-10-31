@@ -1178,6 +1178,56 @@ ul {
   margin-bottom: var(--space-4);
 }
 
+.app-detail-privacy-body ul {
+  list-style: disc;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.app-detail-privacy-body li {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.app-detail-privacy-body li strong {
+  color: var(--color-text);
+}
+
+/* Scrolls sideways on its own so a wide table can't widen the page. */
+.app-detail-privacy-table {
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
+}
+
+.app-detail-privacy-table table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.app-detail-privacy-table th,
+.app-detail-privacy-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.6;
+}
+
+.app-detail-privacy-table th {
+  font-weight: 600;
+}
+
+.app-detail-privacy-table td {
+  color: var(--color-text-muted);
+}
+
+.app-detail-privacy-table td:first-child {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
 /* Responsive */
 @media (max-width: 639px) {
   .app-detail-hero-content {
