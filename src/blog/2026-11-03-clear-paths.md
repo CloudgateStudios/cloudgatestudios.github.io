@@ -26,7 +26,7 @@ I tried really hard not to add more than that. The balance I wanted was somethin
 
 <figure>
   <img src="{{ "/assets/img/ClearPathsIPhoneColorsScreenshot.webp" | url }}" alt="Clear Paths on iPhone in dark mode with the purple Dusk theme, showing the Foxglovepath world." width="560" height="1217" loading="lazy">
-  <figcaption>The Dusk theme in dark mode, out on the Foxglovepath world.</figcaption>
+  <figcaption>The Dusk theme in dark mode.</figcaption>
 </figure>
 
 ## The hard part wasn't the game
