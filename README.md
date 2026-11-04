@@ -110,6 +110,24 @@ The post will automatically appear at `/blog/your-post-slug/` and in the blog pr
 
 ---
 
+## Social Previews (Open Graph)
+
+Every page gets Open Graph and Twitter/X card tags from `src/_includes/layouts/base.njk`, using the page's `title` and `description`.
+
+The preview image is generated at build time: `{% ogImage %}` (defined in `eleventy.config.js`, drawn by `lib/og-image.js`) renders a 1200×630 PNG for each page into `_site/og/`. Blog posts show their date, and any page under a project's `url` shows that project's icon. No extra steps are needed when adding a page or post.
+
+Optional front matter:
+
+```yaml
+ogTitle: "Text for the card"      # defaults to title
+ogImage: /assets/img/Custom.png   # use this image instead of generating one
+ogImageAlt: "Describe the image"
+```
+
+Check a page's preview after deploying with a tool like [opengraph.xyz](https://www.opengraph.xyz/).
+
+---
+
 ## Brand
 
 | Token | Value |
