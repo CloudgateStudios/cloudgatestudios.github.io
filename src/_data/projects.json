@@ -19,7 +19,7 @@
     "url": "/MealPlan/",
     "platform": ["ios", "mac"],
     "status": "upcoming",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Peach",
