@@ -21,8 +21,8 @@ description: "A one-person studio building apps, tools, and services from the Ch
       <p class="section-subheading"></p>
     </div>
     <div class="apps-grid">
-      {% for app in projects %}
-        {% include "app-card.njk" %}
+      {% for app in projects %}{% if app.featured %}
+        {% include "app-card.njk" %}{% endif %}
       {% endfor %}
     </div>
   </div>
