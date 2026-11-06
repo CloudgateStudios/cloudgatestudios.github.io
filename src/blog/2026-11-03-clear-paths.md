@@ -55,6 +55,6 @@ That's all CloudKit, Apple's own sync service, which works automatically with th
 
 ## Try it early
 
-Clear Paths is coming soon to the App Store for iPhone and iPad, and it'll run on Apple silicon Macs too. If you don't want to wait, there's a public TestFlight you can join today: [join the Clear Paths beta](https://testflight.apple.com/join/Ay4GpAuc). No ads, no analytics, no tracking.
+Clear Paths is out now on the App Store for iPhone and iPad, and it runs on Apple silicon Macs too: [get Clear Paths on the App Store](https://apps.apple.com/app/id6829117767). No ads, no analytics, no tracking.
 
 I'm already curious how far people get out there. Jump on the beta and let me know.
